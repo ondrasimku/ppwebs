@@ -1,0 +1,81 @@
+.services {
+    position: relative;
+    padding: 3rem 13rem 10rem 13rem;
+    background-color: var(--white-background);
+}
+
+.services h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: var(--purple);
+}
+
+.services__header-line {
+    border-top: 7px solid var(--pink);
+    border-radius: 1rem;
+    width: 26rem;
+    margin: auto;
+}
+
+.services__cards {
+    margin-top: 7rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5rem;
+}
+
+.services__cards__card {
+    width: 23rem;
+    color: var(--blue);
+}
+
+.services__cards__card__header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+}
+
+.services__cards__card__header i {
+    color: var(--darker-purple);
+}
+
+.services__cards__card__header h2 {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--darker-purple);
+}
+
+.services__cards__card__text {
+    padding: 1rem 2rem 0 2rem;
+    font-size: 1.2rem;
+    text-align: center;
+    word-spacing: 0.2rem;
+    line-height: 1.8;
+}
+
+.custom-shape-divider-bottom-1649647244 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1649647244 svg {
+    position: relative;
+    display: block;
+    width: calc(178% + 1.3px);
+    height: 103px;
+    transform: rotateY(180deg);
+}
+
+.custom-shape-divider-bottom-1649647244 .shape-fill {
+    fill: var(--purple);
+}

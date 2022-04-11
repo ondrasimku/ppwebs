@@ -1,0 +1,51 @@
+/* CSS RESET */
+html {
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body, h1, h2, h3, h4, h5, h6, p, ol, ul {
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+body::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+body {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+
+/* CUSTOM STYLES */
+:root {
+    --purple: #3A0CA3;
+    --darker-purple: #3A0CA3;
+    --pink: #F72585;
+    --lighter-pink: rgba(247, 37, 133, 0.6);
+    --blue: #3F37C9;
+    --white-background: #FFFFFF;
+}
+
+body {
+    background-color: var(--purple);
+    font-family: 'Kanit';
+}

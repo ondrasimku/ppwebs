@@ -1,0 +1,127 @@
+.our-projects {
+    position: relative;
+    padding-top: 2rem;
+    padding-bottom: 15rem;
+    background-color: var(--purple);
+}
+
+.our-projects__header {
+
+}
+
+.our-projects__header h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: white;
+}
+
+.our-projects__header__header-line {
+    border-top: 7px solid var(--pink);
+    border-radius: 1rem;
+    width: 13rem;
+    margin: auto;
+}
+
+.swiper {
+    margin-top: 6rem;
+    margin-bottom: 4rem;
+    width: 90%;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: var(--pink) !important;
+}
+
+.swiper-button-next, .swiper-button-prev {
+    color: var(--pink) !important;
+}
+
+.swiper-pagination-bullet {
+    width: 0.8rem !important;
+    height: 0.8rem !important;
+}
+
+.swiper-button-next:after, .swiper-button-prev:after {
+    font-size: 6rem !important;
+}
+
+.swiper-slide {
+
+}
+
+.swiper-slide__projects-slide {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 0 4rem 0 4rem;
+    gap: 5rem;
+}
+
+.swiper-slide__projects-slide__project {
+    width: 26rem;
+    height: 15rem;
+    position: relative;
+    cursor: pointer;
+}
+
+.swiper-slide__projects-slide__project img {
+    max-width: 100%;
+    filter: brightness(100%);
+    transition: all 0.2s ease;
+    border-radius: 4px;
+}
+
+.swiper-slide__projects-slide__project__link {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    color: white;
+    z-index: 2;
+    opacity: 0;
+    transition: all 0.2s ease;
+    width: 80%;
+    height: 6rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.swiper-slide__projects-slide__project__link>div {
+    font-size: 1.6rem;
+    font-weight: 100;
+}
+
+.swiper-slide__projects-slide__project:hover img {
+    filter: brightness(30%);
+}
+
+.swiper-slide__projects-slide__project:hover .swiper-slide__projects-slide__project__link {
+    opacity: 1;
+}
+
+.custom-shape-divider-bottom-1649647325 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1649647325 svg {
+    position: relative;
+    display: block;
+    width: calc(147% + 1.3px);
+    height: 212px;
+}
+
+.custom-shape-divider-bottom-1649647325 .shape-fill {
+    fill: var(--white-background);
+}

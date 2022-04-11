@@ -6,37 +6,71 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
           rel="stylesheet">
-    <link rel="stylesheet" href="{{ asset('styles/header.css') }}">
-    <link rel="stylesheet" href="{{ asset('styles/main.css') }}">
+    <link rel="stylesheet" href="{{ asset('styles/main/header.css') }}">
+    <link rel="stylesheet" href="{{ asset('styles/main/main.css') }}">
+    <link rel="stylesheet" href="{{ asset('styles/main/services.css') }}">
+    <link rel="stylesheet" href="{{ asset('styles/main/our-projects.css') }}">
+    <link rel="stylesheet" href="{{ asset('styles/main/process.css') }}">
+    <link
+            rel="stylesheet"
+            href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+    />
 {% endblock %}
 {% block javascripts %}
     <script src="https://kit.fontawesome.com/8a752f54a0.js" crossorigin="anonymous"></script>
 {% endblock %}
 
 {% block after_body_javascript %}
-    <script src="{{ asset('scripts/main.js') }}"></script>
+    <script type="module">
+        import Swiper from 'https://unpkg.com/swiper@8/swiper-bundle.esm.browser.min.js'
+
+        const swiper = new Swiper('.swiper', {
+            // Optional parameters
+            direction: 'horizontal',
+            loop: true,
+
+            // If we need pagination
+            pagination: {
+                el: '.swiper-pagination',
+            },
+
+            // Navigation arrows
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+    </script>
+    <script src="{{ asset('scripts/header.js') }}"></script>
 {% endblock %}
 
 
 {% block body %}
     <header>
         <nav class="navbar">
+            <div id="cursor"></div>
             <div class="navbar__icon">
                 <a href="{{ path('main_page') }}"><img src="{{ asset('images/logo.png') }}"/></a>
             </div>
             <div class="navbar__menu">
                 <div class="navbar__menu__item">
                     <div class="navbar__menu__item__circle"></div>
-                    <a href="#">Domů</a></div>
+                    <a href="#">Domů</a>
+                </div>
                 <div class="navbar__menu__item">
                     <div class="navbar__menu__item__circle active"></div>
-                    <a href="#" id="active">O nás</a></div>
+                    <a href="#" id="active">O nás</a>
+                </div>
                 <div class="navbar__menu__item">
                     <div class="navbar__menu__item__circle"></div>
-                    <a href="#">Naše projekty</a></div>
+                    <a href="#">Naše projekty</a>
+                </div>
             </div>
             <div class="navbar__contact">
-                <a href="#">Kontakt</a>
+                <div class="navbar__menu__item">
+                    <div class="navbar__menu__item__circle"></div>
+                    <a href="#">Kontakt</a>
+                </div>
             </div>
         </nav>
         <section class="header-info">
@@ -161,22 +195,94 @@
             </div>
         </section>
         <section class="our-projects">
+            <img src="{{ asset('waves/circle.svg') }}" style="position: absolute; z-index: 1; top: 10rem; left: 15rem; width: 3.5rem;"/>
+            <!-- <img src="{{ asset('waves/circle.svg') }}" style="position: absolute; z-index: 1; top: 26rem; left: 34rem; width: 4.5rem;"/> -->
+            <img src="{{ asset('waves/circle.svg') }}" style="position: absolute; z-index: 1; top: 1rem; left: 40rem; width: 6rem;"/>
+            <img src="{{ asset('waves/circle.svg') }}" style="position: absolute; z-index: 1; top: 9rem; left: 66rem; width: 4.8rem;"/>
+            <img src="{{ asset('waves/circle.svg') }}" style="position: absolute; z-index: 1; top: 30rem; left: 80rem; width: 9rem;"/>
+            <img src="{{ asset('waves/circle.svg') }}" style="position: absolute; z-index: 1; top: 2rem; left: 90rem; width: 2rem;"/>
             <div class="our-projects__header">
                 <h1>Naše projekty</h1>
             </div>
             <div class="our-projects__header__header-line"></div>
-            <div class="our-projects__projects">
-                <div class="our-projects__projects__project">
-                    <img src="{{ asset('images/project_1.png') }}"/>
+            <!-- Slider main container -->
+            <div class="swiper">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide">
+                        <div class="swiper-slide__projects-slide">
+                            <div class="swiper-slide__projects-slide__project">
+                                <div class="swiper-slide__projects-slide__project__link">
+                                    <div>< &nbsp;Jendrulek s.r.o.&nbsp; /></div>
+                                </div>
+                                <img src="{{ asset('images/project_2.png') }}"/>
+                            </div>
+                            <div class="swiper-slide__projects-slide__project">
+                                <div class="swiper-slide__projects-slide__project__link">
+                                    <div>< &nbsp;Catering J.H.&nbsp; /></div>
+                                </div>
+                                <img src="{{ asset('images/project_1.png') }}"/>
+                            </div>
+                            <div class="swiper-slide__projects-slide__project">
+                                <div class="swiper-slide__projects-slide__project__link">
+                                    <div>< &nbsp;Krili Bangeri a.s.&nbsp; /></div>
+                                </div>
+                                <img src="{{ asset('images/project_2.png') }}"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="swiper-slide__projects-slide">
+                            <div class="swiper-slide__projects-slide__project">
+                                <div class="swiper-slide__projects-slide__project__link">
+                                    <div>< &nbsp;Jendrulek s.r.o.&nbsp; /></div>
+                                </div>
+                                <img src="{{ asset('images/project_2.png') }}"/>
+                            </div>
+                            <div class="swiper-slide__projects-slide__project">
+                                <div class="swiper-slide__projects-slide__project__link">
+                                    <div>< &nbsp;Catering J.H.&nbsp; /></div>
+                                </div>
+                                <img src="{{ asset('images/project_1.png') }}"/>
+                            </div>
+                            <div class="swiper-slide__projects-slide__project">
+                                <div class="swiper-slide__projects-slide__project__link">
+                                    <div>< &nbsp;Krili Bangeri a.s.&nbsp; /></div>
+                                </div>
+                                <img src="{{ asset('images/project_2.png') }}"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="swiper-slide__projects-slide">
+                            <div class="swiper-slide__projects-slide__project">
+                                <div class="swiper-slide__projects-slide__project__link">
+                                    <div>< &nbsp;Jendrulek s.r.o.&nbsp; /></div>
+                                </div>
+                                <img src="{{ asset('images/project_2.png') }}"/>
+                            </div>
+                            <div class="swiper-slide__projects-slide__project">
+                                <div class="swiper-slide__projects-slide__project__link">
+                                    <div>< &nbsp;Catering J.H.&nbsp; /></div>
+                                </div>
+                                <img src="{{ asset('images/project_1.png') }}"/>
+                            </div>
+                            <div class="swiper-slide__projects-slide__project">
+                                <div class="swiper-slide__projects-slide__project__link">
+                                    <div>< &nbsp;Krili Bangeri a.s.&nbsp; /></div>
+                                </div>
+                                <img src="{{ asset('images/project_2.png') }}"/>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
 
-                <div class="our-projects__projects__project">
-                    <img src="{{ asset('images/project_1.png') }}"/>
-                </div>
-
-                <div class="our-projects__projects__project">
-                    <img src="{{ asset('images/project_1.png') }}"/>
-                </div>
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
             </div>
             <div class="custom-shape-divider-bottom-1649647325">
                 <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
@@ -186,7 +292,36 @@
             </div>
         </section>
         <section class="process">
+            <h1>Jak to u nás chodí?</h1>
+            <div class="process__header-line"></div>
             <div class="process__time-line">
+                <div class="process__time-line__icon">
+
+                </div>
+                <div class="process__time-line__arrow">
+                    <img src="{{ asset('images/arrow.png') }}" />
+                </div>
+                <div class="process__time-line__icon">
+
+                </div>
+                <div class="process__time-line__arrow">
+                    <img src="{{ asset('images/arrow.png') }}" />
+                </div>
+                <div class="process__time-line__icon">
+
+                </div>
+                <div class="process__time-line__arrow">
+                    <img src="{{ asset('images/arrow.png') }}" />
+                </div>
+                <div class="process__time-line__icon">
+
+                </div>
+                <div class="process__time-line__arrow">
+                    <img src="{{ asset('images/arrow.png') }}" />
+                </div>
+                <div class="process__time-line__icon">
+
+                </div>
             </div>
             <div class="process__description">
                 <div class="process__description__left">
