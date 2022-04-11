@@ -23,9 +23,21 @@ img {
     height: auto;
 }
 
+/* Hide scrollbar for Chrome, Safari and Opera */
+body::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+body {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+
 /* CUSTOM STYLES */
 :root {
-    --purple: #3F37C9;
+    --purple: #3A0CA3;
     --darker-purple: #3A0CA3;
     --pink: #F72585;
     --lighter-pink: rgba(247, 37, 133, 0.6);
@@ -34,5 +46,28 @@ img {
 }
 
 body {
+    background-color: var(--purple);
+    font-family: 'Kanit';
+}
 
+.services {
+    padding: 0 20rem 10rem 20rem;
+    border: 1px solid yellow;
+    background-color: var(--white-background);
+}
+
+.services__cards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 5rem;
+    border: 1px solid green;
+}
+
+.services__cards__card {
+    width: 20rem;
+    height: 15rem;
+    border: 1px solid red;
+    color: var(--blue);
 }

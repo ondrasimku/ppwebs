@@ -2,7 +2,11 @@
 
 {% block title %}Pied Piper Web Solutions{% endblock %}
 {% block stylesheets %}
-    <link rel="stylesheet" href="{{ asset('styles/main.css') }}"
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('styles/header.css') }}">
+    <link rel="stylesheet" href="{{ asset('styles/main.css') }}">
 {% endblock %}
 {% block javascripts %}
 {% endblock %}
@@ -10,6 +14,117 @@
 
 {% block body %}
     <header>
+        <nav class="navbar">
+            <div class="navbar__icon">
+                <img src="{{ asset('images/logo.png') }}" />
+            </div>
+            <div class="navbar__menu">
+                <div class="navbar__menu__item"><div class="navbar__menu__item__circle"></div><a href="#">Domů</a></div>
+                <div class="navbar__menu__item"><div class="navbar__menu__item__circle"></div><a href="#" id="active">O nás</a></div>
+                <div class="navbar__menu__item"><div class="navbar__menu__item__circle"></div><a href="#">Naše projekty</a></div>
+            </div>
+            <div class="navbar__contact">
+                <a href="#">Kontakt</a>
+            </div>
+        </nav>
+        <section class="header-info">
+            <article class="header-info__devices">
+                <img src="{{ asset('waves/test.svg') }}" id="wave"/>
+                <img src="{{ asset('waves/DEVICES.png') }}" id="devices" />
+            </article>
+            <article class="header-info__text">
+                <img src="{{ asset('waves/circle.svg') }}" style="position: absolute; z-index: 1; top: 16rem;"/>
+                <img src="{{ asset('waves/circle.svg') }}" style="position: absolute; z-index: 1; top: 7rem; margin-left: 13rem; width: 3.5rem;"/>
+                <img src="{{ asset('waves/circle.svg') }}" style="position: absolute; z-index: 1; top: 9rem; margin-left: 34rem;"/>
+                <div>
+                    <h2>Ideální weby na míru</h2>
+                    <p>
+                    Děláme weby na míru už řadu let. Vždy přistupujeme k tvorbě webu plně individuálně. Vždy přínášíme do
+                    projektu vlastní kreativitu a názor, kvalitní a osvěčené vlastní technologické řešení a zejména
+                    mnohaleté zkušenosti. Snažíme se pochopit vaše představy a cíle. Chápe vaše budoucí uživatele webu a
+                    dáváme tak dohromady celkové webové řešení
+                    </p>
+                </div>
+            </article>
+        </section>
+        <div class="custom-shape-divider-bottom-1649629872">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
+                 preserveAspectRatio="none">
+                <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z"
+                      opacity=".25" class="shape-fill"></path>
+                <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z"
+                      opacity=".5" class="shape-fill"></path>
+                <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z"
+                      class="shape-fill"></path>
+            </svg>
+        </div>
     </header>
-    <h1>Hello World!</h1>
+    <main>
+        <section class="services">
+            <h1>Co vám můžeme nabídnout?</h1>
+            <div class="services__cards">
+                <article class="services__cards__card">
+                    <div class="services__cards__card__header">
+                        Design na míru
+                    </div>
+                    <div class="services__cards__card__text">
+                        Obsah je král a na prezentačních webech to platí dvojnásob. Pomůžeme vám s texty, pořídíme fotky
+                        nebo videa, nachystáme ikony, bannery nebo infografiku.
+                    </div>
+                </article>
+
+                <article class="services__cards__card">
+                    <div class="services__cards__card__header">
+                        Design na míru1
+                    </div>
+                    <div class="services__cards__card__text">
+                        Obsah je král a na prezentačních webech to platí dvojnásob. Pomůžeme vám s texty, pořídíme fotky
+                        nebo videa, nachystáme ikony, bannery nebo infografiku.
+                    </div>
+                </article>
+
+                <article class="services__cards__card">
+                    <div class="services__cards__card__header">
+                        Design na míru1
+                    </div>
+                    <div class="services__cards__card__text">
+                        Obsah je král a na prezentačních webech to platí dvojnásob. Pomůžeme vám s texty, pořídíme fotky
+                        nebo videa, nachystáme ikony, bannery nebo infografiku.
+                    </div>
+                </article>
+
+
+                <article class="services__cards__card">
+                    <div class="services__cards__card__header">
+                        Design na míru1
+                    </div>
+                    <div class="services__cards__card__text">
+                        Obsah je král a na prezentačních webech to platí dvojnásob. Pomůžeme vám s texty, pořídíme fotky
+                        nebo videa, nachystáme ikony, bannery nebo infografiku.
+                    </div>
+                </article>
+
+                <article class="services__cards__card">
+                    <div class="services__cards__card__header">
+                        Design na míru1
+                    </div>
+                    <div class="services__cards__card__text">
+                        Obsah je král a na prezentačních webech to platí dvojnásob. Pomůžeme vám s texty, pořídíme fotky
+                        nebo videa, nachystáme ikony, bannery nebo infografiku.
+                    </div>
+                </article>
+
+
+                <article class="services__cards__card">
+                    <div class="services__cards__card__header">
+                        Design na míru1
+                    </div>
+                    <div class="services__cards__card__text">
+                        Obsah je král a na prezentačních webech to platí dvojnásob. Pomůžeme vám s texty, pořídíme fotky
+                        nebo videa, nachystáme ikony, bannery nebo infografiku.
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
 {% endblock %}
