@@ -27,38 +27,38 @@
     box-shadow: 0 0 3px var(--pink);
 }
 
-.swiper.technologies-swiper {
+.swiper.projects-swiper {
     margin-top: 6rem;
     margin-bottom: 4rem;
     width: 90%;
     cursor: grabbing;
 }
 
-.swiper.technologies-swiper .swiper-wrapper {
+.swiper.projects-swiper .swiper-wrapper {
     padding-bottom: 4rem;
 }
 
-.swiper.technologies-swiper .swiper-pagination-bullet-active {
+.swiper.projects-swiper .swiper-pagination-bullet-active {
     background-color: var(--pink) !important;
     box-shadow: 0 0 8px var(--pink) !important;
 }
 
-.swiper.technologies-swiper .swiper-button-next, .swiper-button-prev {
+.swiper.projects-swiper .swiper-button-next, .swiper-button-prev {
     color: var(--pink) !important;
     top: 8rem !important;
 }
 
-.swiper.technologies-swiper .swiper-pagination-bullet {
+.swiper.projects-swiper .swiper-pagination-bullet {
     width: 0.8rem !important;
     height: 0.8rem !important;
     transition: 0.4s ease;
 }
 
-.swiper.technologies-swiper .swiper-button-next:after, .swiper-button-prev:after {
+.swiper.projects-swiper .swiper-button-next:after, .swiper-button-prev:after {
     font-size: 6rem !important;
 }
 
-.swiper.technologies-swiper .swiper-slide {
+.swiper.projects-swiper .swiper-slide {
 
 }
 

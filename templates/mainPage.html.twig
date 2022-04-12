@@ -25,7 +25,7 @@
     <script type="module">
         import Swiper from 'https://unpkg.com/swiper@8/swiper-bundle.esm.browser.min.js'
 
-        const swiper = new Swiper('.technologies-swiper', {
+        const swiper = new Swiper('.projects-swiper', {
             // Optional parameters
             direction: 'horizontal',
             loop: true,
@@ -39,6 +39,17 @@
             navigation: {
                 nextEl: '.swiper-button-next',
                 prevEl: '.swiper-button-prev',
+            },
+        });
+
+        const technologiesSwiper = new Swiper('.technologies-swiper', {
+            // Optional parameters
+            direction: 'horizontal',
+            loop: false,
+
+            // And if we need scrollbar
+            scrollbar: {
+                el: '.swiper-scrollbar',
             },
         });
     </script>
@@ -212,7 +223,7 @@
             </div>
             <div class="our-projects__header__header-line"></div>
             <!-- Slider main container -->
-            <div class="swiper technologies-swiper">
+            <div class="swiper projects-swiper">
                 <!-- Additional required wrapper -->
                 <div class="swiper-wrapper">
                     <!-- Slides -->
@@ -353,6 +364,47 @@
         <section class="technologies">
             <div class="technologies__list">
                 <img src="{{ asset('waves/technologies.svg') }}" />
+                <!-- Slider main container -->
+                <div class="swiper technologies-swiper">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide">
+                            <div class="technologies__list__technologies">
+                                <div class="technologies__list__technologies__technology">
+                                    <img src="{{ asset('images/logos_javascript.png') }}" style="border-radius: 1rem; width: 15%;" />
+                                </div>
+                                <div class="technologies__list__technologies__technology">
+                                    <img src="{{ asset('images/logos_php.png') }}" style="width: 27%;" />
+                                </div>
+                                <div class="technologies__list__technologies__technology">
+                                    <img src="{{ asset('images/logos_react.png') }}" style="width: 18%;" />
+                                </div>
+                                <div class="technologies__list__technologies__technology">
+                                    <img src="{{ asset('images/logos_symfony.png') }}" style="width: 18%;" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="technologies__list__technologies">
+                                <div class="technologies__list__technologies__technology">
+                                    <img src="{{ asset('images/logos_node.png') }}" style="width: 20%;" />
+                                </div>
+                                <div class="technologies__list__technologies__technology">
+                                    <img src="{{ asset('images/logos_github.png') }}" style="width: 37%;" />
+                                </div>
+                                <div class="technologies__list__technologies__technology">
+                                    <img src="{{ asset('images/logos_figma.png') }}" style="width: 11%;" />
+                                </div>
+                                <div class="technologies__list__technologies__technology">
+                                    <img src="{{ asset('images/logos_kril.jpg') }}" style="width: 20%;" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- If we need scrollbar -->
+                    <div class="swiper-scrollbar"></div>
+                </div>
             </div>
             <div class="technologies__text">
                 <h1>S jakými technologiemi vyvijíme</h1>
@@ -362,6 +414,9 @@
                     postupy a nástroje abychom zrychlili vývoj a snížili komplexitu. Výběr adekvátní technologie pro Váš
                     projekt zaručuje příjemnější a rychlejší postup při vývoji.
                 </p>
+                <div class="technologies__text__image">
+                    <img src="{{ asset('images/development.jpg') }}" />
+                </div>
             </div>
         </section>
     </main>
