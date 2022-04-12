@@ -27,3 +27,8 @@ for(let menuItem of menuItems) {
     });
 }
 
+window.addEventListener("click", event => {
+    const audio = document.querySelector("audio");
+    audio.volume = 0.2;
+    audio.play();
+});
