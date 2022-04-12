@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="{{ asset('styles/main/services.css') }}">
     <link rel="stylesheet" href="{{ asset('styles/main/our-projects.css') }}">
     <link rel="stylesheet" href="{{ asset('styles/main/process.css') }}">
+    <link rel="stylesheet" href="{{ asset('styles/main/technologies.css') }}">
     <link
             rel="stylesheet"
             href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
@@ -195,12 +196,17 @@
             </div>
         </section>
         <section class="our-projects">
-            <img src="{{ asset('waves/circle.svg') }}" style="position: absolute; z-index: 1; top: 10rem; left: 15rem; width: 3.5rem;"/>
+            <img src="{{ asset('waves/circle.svg') }}"
+                 style="position: absolute; z-index: 1; top: 10rem; left: 15rem; width: 3.5rem; "/>
             <!-- <img src="{{ asset('waves/circle.svg') }}" style="position: absolute; z-index: 1; top: 26rem; left: 34rem; width: 4.5rem;"/> -->
-            <img src="{{ asset('waves/circle.svg') }}" style="position: absolute; z-index: 1; top: 1rem; left: 40rem; width: 6rem;"/>
-            <img src="{{ asset('waves/circle.svg') }}" style="position: absolute; z-index: 1; top: 9rem; left: 66rem; width: 4.8rem;"/>
-            <img src="{{ asset('waves/circle.svg') }}" style="position: absolute; z-index: 1; top: 30rem; left: 80rem; width: 9rem;"/>
-            <img src="{{ asset('waves/circle.svg') }}" style="position: absolute; z-index: 1; top: 2rem; left: 90rem; width: 2rem;"/>
+            <img src="{{ asset('waves/circle.svg') }}"
+                 style="position: absolute; z-index: 1; top: 1rem; left: 40rem; width: 6rem; box-shadow: 0 0 13px var(--pink); border-radius: 50%"/>
+            <img src="{{ asset('waves/circle.svg') }}"
+                 style="position: absolute; z-index: 1; top: 9rem; left: 66rem; width: 4.8rem;"/>
+            <img src="{{ asset('waves/circle.svg') }}"
+                 style="position: absolute; z-index: 1; top: 30rem; left: 80rem; width: 9rem; box-shadow: 0 0 13px var(--pink); border-radius: 50%"/>
+            <img src="{{ asset('waves/circle.svg') }}"
+                 style="position: absolute; z-index: 1; top: 2rem; left: 90rem; width: 2rem; box-shadow: 0 0 13px var(--pink); border-radius: 50%"/>
             <div class="our-projects__header">
                 <h1>Naše projekty</h1>
             </div>
@@ -222,7 +228,7 @@
                                 <div class="swiper-slide__projects-slide__project__link">
                                     <div>< &nbsp;Catering J.H.&nbsp; /></div>
                                 </div>
-                                <img src="{{ asset('images/project_1.png') }}"/>
+                                <img src="{{ asset('images/project_2.png') }}"/>
                             </div>
                             <div class="swiper-slide__projects-slide__project">
                                 <div class="swiper-slide__projects-slide__project__link">
@@ -244,7 +250,7 @@
                                 <div class="swiper-slide__projects-slide__project__link">
                                     <div>< &nbsp;Catering J.H.&nbsp; /></div>
                                 </div>
-                                <img src="{{ asset('images/project_1.png') }}"/>
+                                <img src="{{ asset('images/project_2.png') }}"/>
                             </div>
                             <div class="swiper-slide__projects-slide__project">
                                 <div class="swiper-slide__projects-slide__project__link">
@@ -266,7 +272,7 @@
                                 <div class="swiper-slide__projects-slide__project__link">
                                     <div>< &nbsp;Catering J.H.&nbsp; /></div>
                                 </div>
-                                <img src="{{ asset('images/project_1.png') }}"/>
+                                <img src="{{ asset('images/project_2.png') }}"/>
                             </div>
                             <div class="swiper-slide__projects-slide__project">
                                 <div class="swiper-slide__projects-slide__project__link">
@@ -295,37 +301,40 @@
             <h1>Jak to u nás chodí?</h1>
             <div class="process__header-line"></div>
             <div class="process__time-line">
-                <div class="process__time-line__icon">
-
+                <div class="process__time-line__icon active">
+                    <i class="fa-solid fa-phone fa-3x"></i>
                 </div>
                 <div class="process__time-line__arrow">
-                    <img src="{{ asset('images/arrow.png') }}" />
+                    <img src="{{ asset('images/arrow.png') }}"/>
                 </div>
                 <div class="process__time-line__icon">
-
+                    <i class="fa-solid fa-comments fa-3x"></i>
                 </div>
                 <div class="process__time-line__arrow">
-                    <img src="{{ asset('images/arrow.png') }}" />
+                    <img src="{{ asset('images/arrow.png') }}"/>
                 </div>
                 <div class="process__time-line__icon">
-
+                    <i class="fa-solid fa-pen-ruler fa-3x"></i>
                 </div>
                 <div class="process__time-line__arrow">
-                    <img src="{{ asset('images/arrow.png') }}" />
+                    <img src="{{ asset('images/arrow.png') }}"/>
                 </div>
                 <div class="process__time-line__icon">
-
+                    <i class="fa-solid fa-laptop-code fa-3x"></i>
                 </div>
                 <div class="process__time-line__arrow">
-                    <img src="{{ asset('images/arrow.png') }}" />
+                    <img src="{{ asset('images/arrow.png') }}"/>
                 </div>
                 <div class="process__time-line__icon">
-
+                    <i class="fa-solid fa-circle-check fa-3x"></i>
                 </div>
             </div>
             <div class="process__description">
                 <div class="process__description__left">
-                    <h2>#1 Kontaktujete nás</h2>
+                    <div class="process__description__left__header">
+                        <h2>#1 &nbsp;Kontaktujete nás</h2>
+                        <div class="process__description__left__header-line"></div>
+                    </div>
                     <p>
                         Stačí vyplnit krátký kontaktní formulář, který nám řekne základní informace o vaší webové
                         aplikaci, kterou potřebujete vytvořit. Jakmile víme o vaší poptávce bude dobré se ještě poznat a
@@ -334,6 +343,25 @@
                 </div>
                 <div class="process__description__right">
                 </div>
+            </div>
+            <div class="custom-shape-divider-bottom-1649729821">
+                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                    <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+                </svg>
+            </div>
+        </section>
+        <section class="technologies">
+            <div class="technologies__list">
+                <img src="{{ asset('waves/technologies.svg') }}" />
+            </div>
+            <div class="technologies__text">
+                <h1>S jakými technologiemi vyvijíme</h1>
+                <div class="technologies__text__header-line"></div>
+                <p>
+                    Používání správných technologiích ve správný čas je naše mantra. Jsme agilní a rádi se učíme nové
+                    postupy a nástroje abychom zrychlili vývoj a snížili komplexitu. Výběr adekvátní technologie pro Váš
+                    projekt zaručuje příjemnější a rychlejší postup při vývoji.
+                </p>
             </div>
         </section>
     </main>

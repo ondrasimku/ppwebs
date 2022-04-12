@@ -1,7 +1,7 @@
 .our-projects {
     position: relative;
     padding-top: 2rem;
-    padding-bottom: 15rem;
+    padding-bottom: 12rem;
     background-color: var(--purple);
 }
 
@@ -15,6 +15,8 @@
     font-weight: 900;
     text-transform: uppercase;
     color: white;
+    text-shadow:
+            0 0 3px white;
 }
 
 .our-projects__header__header-line {
@@ -22,6 +24,7 @@
     border-radius: 1rem;
     width: 13rem;
     margin: auto;
+    box-shadow: 0 0 3px var(--pink);
 }
 
 .swiper {
@@ -30,17 +33,24 @@
     width: 90%;
 }
 
+.swiper-wrapper {
+    padding-bottom: 4rem;
+}
+
 .swiper-pagination-bullet-active {
     background-color: var(--pink) !important;
+    box-shadow: 0 0 8px var(--pink) !important;
 }
 
 .swiper-button-next, .swiper-button-prev {
     color: var(--pink) !important;
+    top: 8rem !important;
 }
 
 .swiper-pagination-bullet {
     width: 0.8rem !important;
     height: 0.8rem !important;
+    transition: 0.4s ease;
 }
 
 .swiper-button-next:after, .swiper-button-prev:after {
@@ -66,10 +76,11 @@
     height: 15rem;
     position: relative;
     cursor: pointer;
+    box-shadow: 0 14px 23px 0 rgba(0,0,0,0.7);
 }
 
 .swiper-slide__projects-slide__project img {
-    max-width: 100%;
+    max-height: 100%;
     filter: brightness(100%);
     transition: all 0.2s ease;
     border-radius: 4px;

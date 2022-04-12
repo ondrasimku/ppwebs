@@ -10,6 +10,8 @@
     font-weight: 900;
     text-transform: uppercase;
     color: var(--purple);
+    text-shadow:
+            0 0 2px var(--purple);
 }
 
 .services__header-line {
@@ -17,6 +19,7 @@
     border-radius: 1rem;
     width: 26rem;
     margin: auto;
+    box-shadow: 0 0 2px var(--pink);
 }
 
 .services__cards {

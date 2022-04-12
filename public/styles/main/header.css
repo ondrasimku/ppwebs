@@ -68,6 +68,8 @@ header {
 .navbar__contact a {
     color: var(--pink);
     font-weight: bold;
+    text-shadow:
+            0 0 4px var(--pink);
 }
 
 .navbar__menu__item {
