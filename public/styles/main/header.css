@@ -209,7 +209,7 @@ nav a#active {
 
 .custom-shape-divider-bottom-1649629872 {
     position: absolute;
-    bottom: 0;
+    bottom: -1px;
     left: 0;
     width: 100%;
     overflow: hidden;
