@@ -135,7 +135,7 @@
 }
 
 .process__description__left__header-line {
-    border-top: 3px solid var(--pink);
+    border-top: 5px solid var(--pink);
     border-radius: 1rem;
     width: 13rem;
     margin: auto;
@@ -145,6 +145,7 @@
     padding: 3rem;
     font-size: 1.2rem;
     text-align: justify;
+    font-weight: 200;
 }
 
 .process__description__right {

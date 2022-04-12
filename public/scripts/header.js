@@ -26,3 +26,4 @@ for(let menuItem of menuItems) {
         firstActive.className = "navbar__menu__item__circle active";
     });
 }
+

@@ -27,37 +27,38 @@
     box-shadow: 0 0 3px var(--pink);
 }
 
-.swiper {
+.swiper.technologies-swiper {
     margin-top: 6rem;
     margin-bottom: 4rem;
     width: 90%;
+    cursor: grabbing;
 }
 
-.swiper-wrapper {
+.swiper.technologies-swiper .swiper-wrapper {
     padding-bottom: 4rem;
 }
 
-.swiper-pagination-bullet-active {
+.swiper.technologies-swiper .swiper-pagination-bullet-active {
     background-color: var(--pink) !important;
     box-shadow: 0 0 8px var(--pink) !important;
 }
 
-.swiper-button-next, .swiper-button-prev {
+.swiper.technologies-swiper .swiper-button-next, .swiper-button-prev {
     color: var(--pink) !important;
     top: 8rem !important;
 }
 
-.swiper-pagination-bullet {
+.swiper.technologies-swiper .swiper-pagination-bullet {
     width: 0.8rem !important;
     height: 0.8rem !important;
     transition: 0.4s ease;
 }
 
-.swiper-button-next:after, .swiper-button-prev:after {
+.swiper.technologies-swiper .swiper-button-next:after, .swiper-button-prev:after {
     font-size: 6rem !important;
 }
 
-.swiper-slide {
+.swiper.technologies-swiper .swiper-slide {
 
 }
 

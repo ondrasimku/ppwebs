@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: row;
     background-color: var(--purple);
-    padding: 4rem 0 4rem 0;
+    padding: 4rem 0 30rem 0;
 }
 
 .technologies__list {
@@ -11,7 +11,14 @@
 }
 
 .technologies__list img {
-    width: 96%;
+    position: absolute;
+    width: 43%;
+}
+
+.technologies-swiper {
+    width: 100%;
+    height: 20rem;
+    z-index: 3;
 }
 
 .technologies__text {
@@ -39,5 +46,6 @@
     font-size: 1.2rem;
     padding: 3rem 19rem 0 0;
     color: #fff;
+    font-weight: 200;
     text-align: justify;
 }
