@@ -92,17 +92,15 @@
                 <div></div>
             </div>
         </nav>
-        <section class="header-info" style="display: none">
+        <section class="header-info">
             <article class="header-info__devices">
-                <img src="{{ asset('waves/test.svg') }}" id="wave"/>
+                <img src="{{ asset('waves/device-background.svg') }}" id="wave"/>
                 <img src="{{ asset('waves/DEVICES.png') }}" id="devices">
             </article>
             <article class="header-info__text">
-                <img src="{{ asset('waves/circle.svg') }}" style="position: absolute; z-index: 1; top: 16rem;"/>
-                <img src="{{ asset('waves/circle.svg') }}"
-                     style="position: absolute; z-index: 1; top: 7rem; margin-left: 13rem; width: 3.5rem;"/>
-                <img src="{{ asset('waves/circle.svg') }}"
-                     style="position: absolute; z-index: 1; top: 9rem; margin-left: 34rem;"/>
+                <img src="{{ asset('waves/circle.svg') }}" class="header-info__circle"/>
+                <img src="{{ asset('waves/circle.svg') }}" class="header-info__circle"/>
+                <img src="{{ asset('waves/circle.svg') }}" class="header-info__circle"/>
                 <div>
                     <h2>Ideální weby na míru</h2>
                     <p>
@@ -116,7 +114,7 @@
                 </div>
             </article>
         </section>
-        <div class="custom-shape-divider-bottom-1649629872" style="display: none">
+        <div class="header-info__ending">
             <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
                  preserveAspectRatio="none">
                 <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z"
@@ -128,10 +126,12 @@
             </svg>
         </div>
     </header>
-    <main style="display: none">
+    <main>
         <section class="services">
-            <h1>Co vám můžeme nabídnout?</h1>
-            <div class="services__header-line"></div>
+            <div class="services__header">
+                <h1>Co vám můžeme nabídnout?</h1>
+                <div class="services__header-line"></div>
+            </div>
             <div class="services__cards">
                 <article class="services__cards__card">
                     <div class="services__cards__card__header">
@@ -213,7 +213,7 @@
                 </svg>
             </div>
         </section>
-        <section class="our-projects">
+        <section class="our-projects" style="display: none;">
             <img src="{{ asset('waves/circle.svg') }}"
                  style="position: absolute; z-index: 1; top: 10rem; left: 15rem; width: 3.5rem; "/>
             <!-- <img src="{{ asset('waves/circle.svg') }}" style="position: absolute; z-index: 1; top: 26rem; left: 34rem; width: 4.5rem;"/> -->
@@ -315,7 +315,7 @@
                 </svg>
             </div>
         </section>
-        <section class="process">
+        <section class="process" style="display: none;">
             <h1>Jak to u nás chodí?</h1>
             <div class="process__header-line"></div>
             <div class="process__time-line">
@@ -368,7 +368,7 @@
                 </svg>
             </div>
         </section>
-        <section class="technologies">
+        <section class="technologies" style="display: none;">
             <div class="technologies__list">
                 <img src="{{ asset('waves/technologies.svg') }}" />
                 <!-- Slider main container -->

@@ -1,10 +1,14 @@
 .services {
     position: relative;
-    padding: 3rem 13rem 10rem 13rem;
+    padding: 3rem 13% 10rem 13%;
     background-color: var(--white-background);
 }
 
-.services h1 {
+.services__header {
+    width: 100%;
+}
+
+.services__header h1 {
     text-align: center;
     font-size: 2.5rem;
     font-weight: 900;
@@ -39,6 +43,7 @@
 .services__cards__card__header {
     display: flex;
     flex-direction: row;
+    justify-content: center;
     align-items: center;
     gap: 1rem;
 }
@@ -82,4 +87,28 @@
 
 .custom-shape-divider-bottom-1649647244 .shape-fill {
     fill: var(--purple);
+}
+
+
+@media only screen and (max-width: 992px) {
+    .services {
+        position: relative;
+        padding: 3rem 2% 10rem 2%;
+        background-color: var(--white-background);
+    }
+
+    .services__header-line {
+        border-top: 5px solid var(--pink);
+        width: 40%;
+    }
+}
+
+@media only screen and (max-width: 731px) {
+    .services__header h1 {
+        font-size: 1.6rem;
+    }
+
+    .services__cards {
+        margin-top: 3rem;
+    }
 }
