@@ -9,6 +9,11 @@ header {
     background-color: var(--blue);
     display: flex;
     flex-direction: row;
+    z-index: 10;
+}
+
+.navbar__close {
+    display: none;
 }
 
 #cursor {
@@ -72,6 +77,10 @@ header {
             0 0 4px var(--pink);
 }
 
+.navbar__bar-lines {
+    display: none;
+}
+
 .navbar__menu__item {
     display: flex;
     flex-direction: row;
@@ -80,6 +89,10 @@ header {
 }
 .navbar__menu__item a {
     cursor: none;
+}
+
+.navbar__menu__item.active a {
+    font-weight: bold;
 }
 
 
@@ -148,8 +161,174 @@ nav a {
     letter-spacing: 2px;
 }
 
-nav a#active {
-    font-weight: bold;
+@media only screen and (max-width: 1110px) {
+    #cursor {
+        display: none;
+    }
+
+    .navbar {
+        cursor: unset !important;
+        height: 6rem;
+        position: fixed;
+        width: 100%;
+        background-color: var(--blue);
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        z-index: 10;
+    }
+
+    .navbar--active {
+        transition: all 1s cubic-bezier(0.8, 0.2, 0.25, 1);
+        padding-top: 1rem;
+        cursor: pointer;
+        position: fixed;
+        right: 0;
+        opacity: 0;
+        width: 40%;
+        height: 100%;
+        background-color: var(--blue);
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        z-index: 10;
+    }
+
+    .navbar--active .navbar__close {
+        display: block;
+        position: absolute;
+        top: 10px;
+        right: 5%;
+        color: var(--pink);
+        transition: all 0.2s ease;
+    }
+
+    .navbar--active .navbar__close:hover {
+        color: var(--lighter-pink);
+    }
+
+    .navbar--active .navbar__icon {
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: unset;
+        align-items: unset;
+        flex-grow: unset;
+        align-self: flex-start;
+        text-align: center;
+        padding: 0 10%;
+    }
+
+    .navbar__icon {
+        padding: 1rem;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-grow: inherit;
+        width: 12rem;
+        align-self: unset;
+    }
+
+    .navbar__icon img {
+        max-width: 100%;
+    }
+
+    .navbar--active .navbar__menu {
+        flex-grow: unset;
+        display: flex;
+        height: auto;
+        align-self: unset;
+        opacity: 1;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: normal;
+        gap: 1rem;
+        margin-top: 2rem;
+        width: 100%;
+        transition: all 1s ease;
+        transition-delay: 0.2s;
+    }
+    .navbar--active .navbar__menu>div {
+        display: inherit;
+    }
+
+    .navbar__menu {
+        width: 0;
+        opacity: 0;
+        transition: all 1s ease;
+    }
+    .navbar__menu>div {
+        display: none;
+    }
+
+    .navbar--active .navbar__contact {
+        height: 3rem;
+        flex-grow: unset;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        opacity: 0;
+        animation: appear 0.5s ease forwards 1s;
+    }
+
+    @keyframes appear {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+
+
+    .navbar__contact {
+        display: none;
+    }
+
+    .navbar__bar-lines {
+        display: flex;
+        position: absolute;
+        right: 10%;
+        flex-direction: column;
+        align-self: center;
+        justify-self: flex-start;
+        justify-content: space-evenly;
+        height: 2.5rem;
+        width: 2.4rem;
+    }
+    .navbar__bar-lines>div {
+        width: 100%;
+        border: 2px solid var(--pink);
+        border-radius: 2rem;
+        transition: all 0.2s ease;
+    }
+    .navbar__bar-lines:hover {
+        cursor: pointer !important;
+    }
+    .navbar__bar-lines:hover>div{
+        border: 2px solid var(--lighter-pink);
+    }
+    .navbar--active .navbar__bar-lines {
+        display: none;
+    }
+
+
+    .navbar--active nav a {
+        font-size: 1.2rem;
+    }
+
+    .navbar__menu__item a {
+        cursor: pointer;
+    }
+}
+
+@media only screen and (max-width: 580px) {
+    .navbar--active {
+        width: 66%;
+    }
 }
 
 .header-info {
@@ -227,3 +406,5 @@ nav a#active {
 .custom-shape-divider-bottom-1649629872 .shape-fill {
     fill: #FFFFFF;
 }
+
+/* MOBILE MENU */

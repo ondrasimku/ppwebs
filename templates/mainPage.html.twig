@@ -60,19 +60,20 @@
 {% block body %}
     <audio src="{{ asset('sounds/kril.mp3') }}"></audio>
     <header>
-        <nav class="navbar">
+        <nav class="navbar" id="navbar">
+            <div class="navbar__close" id="close-menu">✖</div>
             <div id="cursor"></div>
             <div class="navbar__icon">
                 <a href="{{ path('main_page') }}"><img src="{{ asset('images/logo.png') }}"/></a>
             </div>
-            <div class="navbar__menu">
+            <div class="navbar__menu" id="navbar__menu">
                 <div class="navbar__menu__item">
                     <div class="navbar__menu__item__circle"></div>
                     <a href="#">Domů</a>
                 </div>
-                <div class="navbar__menu__item">
+                <div class="navbar__menu__item active">
                     <div class="navbar__menu__item__circle active"></div>
-                    <a href="#" id="active">O nás</a>
+                    <a href="#">O nás</a>
                 </div>
                 <div class="navbar__menu__item">
                     <div class="navbar__menu__item__circle"></div>
@@ -85,8 +86,13 @@
                     <a href="#">Kontakt</a>
                 </div>
             </div>
+            <div class="navbar__bar-lines" id="open-menu">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
         </nav>
-        <section class="header-info">
+        <section class="header-info" style="display: none">
             <article class="header-info__devices">
                 <img src="{{ asset('waves/test.svg') }}" id="wave"/>
                 <img src="{{ asset('waves/DEVICES.png') }}" id="devices">
@@ -110,7 +116,7 @@
                 </div>
             </article>
         </section>
-        <div class="custom-shape-divider-bottom-1649629872">
+        <div class="custom-shape-divider-bottom-1649629872" style="display: none">
             <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
                  preserveAspectRatio="none">
                 <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z"
@@ -122,7 +128,7 @@
             </svg>
         </div>
     </header>
-    <main>
+    <main style="display: none">
         <section class="services">
             <h1>Co vám můžeme nabídnout?</h1>
             <div class="services__header-line"></div>
