@@ -2,7 +2,54 @@
     position: relative;
     padding-top: 2rem;
     padding-bottom: 12rem;
-    background-color: var(--purple);
+    background: rgb(63, 55, 201);
+    background: linear-gradient(0deg, rgba(63, 55, 201, 1) 35%, rgba(58, 12, 163, 1) 60%);
+}
+
+.our-projects__circle:nth-of-type(1) {
+    position: absolute;
+    z-index: 1;
+    top: 10rem;
+    margin-left: 15%;
+    width: 3.5rem;
+}
+
+.our-projects__circle:nth-of-type(2) {
+    position: absolute;
+    z-index: 1;
+    top: 1rem;
+    margin-left: 30%;
+    width: 6rem;
+    box-shadow: 0 0 13px var(--pink);
+    border-radius: 50%;
+}
+
+.our-projects__circle:nth-of-type(3) {
+    position: absolute;
+    z-index: 1;
+    top: 9rem;
+    margin-left: 63%;
+    width: 4.8rem;
+}
+
+.our-projects__circle:nth-of-type(4) {
+    position: absolute;
+    z-index: 1;
+    top: 30rem;
+    right: 16%;
+    width: 9rem;
+    box-shadow: 0 0 13px var(--pink);
+    border-radius: 50%;
+}
+
+.our-projects__circle:nth-of-type(5) {
+    position: absolute;
+    z-index: 1;
+    top: 2rem;
+    right: 11%;
+    width: 2rem;
+    box-shadow: 0 0 13px var(--pink);
+    border-radius: 50%;
 }
 
 .our-projects__header {
@@ -10,16 +57,19 @@
 }
 
 .our-projects__header h1 {
+    z-index: 2;
+    position: relative;
     text-align: center;
     font-size: 2.5rem;
     font-weight: 900;
     text-transform: uppercase;
     color: white;
-    text-shadow:
-            0 0 3px white;
+    text-shadow: 0 0 3px white;
 }
 
 .our-projects__header__header-line {
+    z-index: 2;
+    position: relative;
     border-top: 7px solid var(--pink);
     border-radius: 1rem;
     width: 13rem;
@@ -68,20 +118,19 @@
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    padding: 0 4rem 0 4rem;
-    gap: 5rem;
 }
 
 .swiper-slide__projects-slide__project {
-    width: 26rem;
-    height: 15rem;
+    height: 13rem;
     position: relative;
     cursor: pointer;
-    box-shadow: 0 14px 23px 0 rgba(0,0,0,0.7);
+    box-shadow: 0 14px 23px 0 rgba(0, 0, 0, 0.7);
 }
 
 .swiper-slide__projects-slide__project img {
     max-height: 100%;
+    z-index: 2;
+    position: relative;
     filter: brightness(100%);
     transition: all 0.2s ease;
     border-radius: 4px;
@@ -93,7 +142,7 @@
     transform: translate(-50%, -50%);
     position: absolute;
     color: white;
-    z-index: 2;
+    z-index: 3;
     opacity: 0;
     transition: all 0.2s ease;
     width: 80%;
@@ -104,7 +153,7 @@
     justify-content: center;
 }
 
-.swiper-slide__projects-slide__project__link>div {
+.swiper-slide__projects-slide__project__link > div {
     font-size: 1.6rem;
     font-weight: 100;
 }
@@ -136,4 +185,69 @@
 
 .custom-shape-divider-bottom-1649647325 .shape-fill {
     fill: var(--white-background);
+}
+
+@media only screen and (max-width: 1010px) {
+    .our-projects__circle:nth-of-type(1) {
+        display: none;
+    }
+
+    .our-projects__circle:nth-of-type(2) {
+        margin-left: 7%;
+    }
+}
+
+@media only screen and (max-width: 590px) {
+    .swiper.projects-swiper .swiper-button-next:after, .swiper-button-prev:after {
+        font-size: 2rem !important;
+    }
+
+    .swiper-slide__projects-slide__project {
+        height: 9rem;
+    }
+
+    .swiper.projects-swiper .swiper-button-next, .swiper-button-prev {
+        top: 5rem !important;
+    }
+
+    .our-projects__circle:nth-of-type(4) {
+        top: 26rem;
+    }
+    .swiper-slide__projects-slide__project__link > div {
+        font-size: 1.2rem;
+    }
+}
+
+@media only screen and (max-width: 467px) {
+    .custom-shape-divider-bottom-1649647325 svg {
+        height: 112px;
+    }
+
+    .our-projects {
+        padding-bottom: 2rem;
+    }
+
+    .swiper.projects-swiper {
+        margin-top: 2rem;
+    }
+
+    .our-projects__circle:nth-of-type(1) {
+        display: none;
+    }
+
+    .our-projects__circle:nth-of-type(2) {
+        display: none;
+    }
+
+    .our-projects__circle:nth-of-type(3) {
+        display: none;
+    }
+
+    .our-projects__circle:nth-of-type(4) {
+        display: none;
+    }
+
+    .our-projects__circle:nth-of-type(2) {
+        display: none;
+    }
 }

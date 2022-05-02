@@ -1,13 +1,18 @@
 .technologies {
     display: flex;
     flex-direction: row;
-    background-color: var(--purple);
+    background: rgba(63,55,201,1);
+    background: linear-gradient(0deg, rgba(63,55,201,1) 36%, rgba(58,12,163,1) 80%);
     padding: 4rem 0 30rem 0;
 }
 
 .technologies__list {
     width: 50%;
-    padding: 0 0 0 6rem;
+    padding: 10rem 0 0 6rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 
 .technologies__list img {
@@ -17,15 +22,14 @@
 
 .swiper.technologies-swiper {
     width: 75%;
-    height: 30rem;
-    margin-top: 4rem;
+    height: 80%;
+    padding-bottom: 20%;
 }
 
 .technologies__list__technologies {
-    padding-top: 2rem;
     display: grid;
-    grid-template-columns: 18rem 18rem;
-    grid-template-rows: 11rem 11rem;
+    grid-template-columns: 45% 45%;
+    grid-template-rows: 9rem 9rem;
     justify-content: center;
     row-gap: 2rem;
     column-gap: 2rem;
@@ -47,7 +51,7 @@
 
 .technologies__text {
     width: 50%;
-    padding: 0 6rem 0 3rem;
+    padding: 0 6% 0 5%;
 }
 
 .technologies__text h1 {
@@ -63,12 +67,13 @@
 .technologies__text__header-line {
     border-top: 7px solid var(--pink);
     border-radius: 1rem;
-    width: 23rem;
+    width: 27%;
     box-shadow: 0 0 2px var(--pink);
 }
 .technologies__text p {
     font-size: 1.2rem;
-    padding: 3rem 12rem 0 0;
+    padding: 3rem 0 0 0;
+    width: 78%;
     color: #fff;
     font-weight: 200;
     text-align: justify;
@@ -82,4 +87,142 @@
 .technologies__text__image img {
     max-width: 100%;
     filter: brightness(60%);
+}
+
+@media only screen and (max-width: 1450px) {
+    .technologies__list {
+        padding: 10rem 0 5rem 6rem;
+    }
+
+    .technologies__list__technologies {
+        grid-template-columns: 45% 45%;
+        grid-template-rows: 7rem 7rem;
+    }
+}
+
+@media only screen and (max-width: 1278px) {
+    .technologies {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .technologies__list {
+        width: 100%;
+        padding: 0;
+        margin-top: 13%;
+    }
+
+    .technologies__list img {
+        position: absolute;
+        width: 60%;
+    }
+
+    .swiper.technologies-swiper {
+        width: 50%;
+        height: 80%;
+        padding-bottom: 5%;
+    }
+
+    .technologies__list__technologies {
+        display: grid;
+        grid-template-columns: 40% 40%;
+        grid-template-rows: 8rem 8rem;
+        justify-content: center;
+        row-gap: 2rem;
+        column-gap: 2rem;
+        width: 100%;
+        height: 100%;
+    }
+
+    .technologies__list__technologies__technology {
+        background-color: var(--white-background);
+        box-shadow: 0 10px 16px 0 rgba(0,0,0,0.5);
+        border-radius: 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .technologies__list__technologies__technology img {
+        max-width: 5rem;
+    }
+
+
+
+    .technologies__text {
+        width: 100%;
+        padding: 0 5%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .technologies__text h1 {
+        text-align: center;
+        font-size: 2.1rem;
+    }
+
+    .technologies__text__header-line {
+        border-top: 5px solid var(--pink);
+        width: 40%;
+    }
+    .technologies__text p {
+        font-size: 1.2rem;
+        padding: 3rem 0 0 0;
+        width: 100%;
+    }
+
+    .technologies__text__image {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 930px) {
+    .swiper.technologies-swiper {
+        width: 40%;
+    }
+
+    .technologies__list__technologies {
+        grid-template-columns: 40% 40%;
+        grid-template-rows: 6rem 6rem;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .technologies__list img {
+        position: absolute;
+        width: 90%;
+    }
+
+    .swiper.technologies-swiper {
+        width: 70%;
+    }
+
+    .technologies__list {
+        margin-top: 18%;
+    }
+
+
+    .technologies__list__technologies {
+        grid-template-columns: 40% 40%;
+        grid-template-rows: 7rem 7rem;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .technologies__list img {
+        position: absolute;
+        width: 100%;
+    }
+
+    .swiper.technologies-swiper {
+        width: 90%;
+    }
+
+    .technologies__list__technologies {
+        grid-template-columns: 40% 40%;
+        grid-template-rows: 4.6rem 4.6rem;
+        row-gap: 1rem;
+        column-gap: 1rem;
+    }
 }

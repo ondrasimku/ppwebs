@@ -28,7 +28,10 @@
         const swiper = new Swiper('.projects-swiper', {
             // Optional parameters
             direction: 'horizontal',
-            loop: true,
+            loop: false,
+            slidesPerView: 3,
+            freeMode: false,
+            spaceBetween: 40,
 
             // If we need pagination
             pagination: {
@@ -40,12 +43,27 @@
                 nextEl: '.swiper-button-next',
                 prevEl: '.swiper-button-prev',
             },
+            breakpoints: {
+                // when window width is >= 320px
+                1360: {
+                    slidesPerView: 3,
+                },
+                // when window width is >= 480px
+                930: {
+                    slidesPerView: 2,
+                },
+                // when window width is >= 640px
+                0: {
+                    slidesPerView: 1,
+                }
+            }
         });
 
         const technologiesSwiper = new Swiper('.technologies-swiper', {
             // Optional parameters
             direction: 'horizontal',
             loop: false,
+            spaceBetween: 100,
 
             // And if we need scrollbar
             scrollbar: {
@@ -102,15 +120,16 @@
                 <img src="{{ asset('waves/circle.svg') }}" class="header-info__circle"/>
                 <img src="{{ asset('waves/circle.svg') }}" class="header-info__circle"/>
                 <div>
-                    <h2>Ideální weby na míru</h2>
+                    <h2>Moderní weby na míru</h2>
                     <p>
-                        Děláme weby na míru už řadu let. Vždy přistupujeme k tvorbě webu plně individuálně. Vždy
-                        přínášíme do
-                        projektu vlastní kreativitu a názor, kvalitní a osvěčené vlastní technologické řešení a zejména
-                        mnohaleté zkušenosti. Snažíme se pochopit vaše představy a cíle. Chápe vaše budoucí uživatele
-                        webu a
-                        dáváme tak dohromady celkové webové řešení
+                        V dnešní době je obzvláště <b>důležité prezentovat se online</b>, je to jeden z hlavních kroků k
+                        <b>maximalizaci zisků</b> a <b>úspěšnému rozvoji podnikání</b>. Provedeme vás cestou k <b>dokonalému webu</b> který
+                        bude přesně pasovat na vaše podnikání, přes design a vývoj až po samotný obsah. váš web
+                        vytvoříme pomocí nejmodejnějších technologií a vyšvihneme ho na přední příčky vyhledávačů.
                     </p>
+                    <div class="header-info__text__buttons">
+                        <button class="neon-button">Chci web!!</button>
+                    </div>
                 </div>
             </article>
         </section>
@@ -213,18 +232,12 @@
                 </svg>
             </div>
         </section>
-        <section class="our-projects" style="display: none;">
-            <img src="{{ asset('waves/circle.svg') }}"
-                 style="position: absolute; z-index: 1; top: 10rem; left: 15rem; width: 3.5rem; "/>
-            <!-- <img src="{{ asset('waves/circle.svg') }}" style="position: absolute; z-index: 1; top: 26rem; left: 34rem; width: 4.5rem;"/> -->
-            <img src="{{ asset('waves/circle.svg') }}"
-                 style="position: absolute; z-index: 1; top: 1rem; left: 40rem; width: 6rem; box-shadow: 0 0 13px var(--pink); border-radius: 50%"/>
-            <img src="{{ asset('waves/circle.svg') }}"
-                 style="position: absolute; z-index: 1; top: 9rem; left: 66rem; width: 4.8rem;"/>
-            <img src="{{ asset('waves/circle.svg') }}"
-                 style="position: absolute; z-index: 1; top: 30rem; left: 80rem; width: 9rem; box-shadow: 0 0 13px var(--pink); border-radius: 50%"/>
-            <img src="{{ asset('waves/circle.svg') }}"
-                 style="position: absolute; z-index: 1; top: 2rem; left: 90rem; width: 2rem; box-shadow: 0 0 13px var(--pink); border-radius: 50%"/>
+        <section class="our-projects">
+            <img src="{{ asset('waves/circle.svg') }}" class="our-projects__circle"/>
+            <img src="{{ asset('waves/circle.svg') }}" class="our-projects__circle"/>
+            <img src="{{ asset('waves/circle.svg') }}" class="our-projects__circle"/>
+            <img src="{{ asset('waves/circle.svg') }}" class="our-projects__circle"/>
+            <img src="{{ asset('waves/circle.svg') }}" class="our-projects__circle"/>
             <div class="our-projects__header">
                 <h1>Naše projekty</h1>
             </div>
@@ -242,15 +255,13 @@
                                 </div>
                                 <img src="{{ asset('images/project_2.png') }}"/>
                             </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="swiper-slide__projects-slide">
                             <div class="swiper-slide__projects-slide__project">
                                 <div class="swiper-slide__projects-slide__project__link">
-                                    <div>< &nbsp;Catering J.H.&nbsp; /></div>
-                                </div>
-                                <img src="{{ asset('images/project_2.png') }}"/>
-                            </div>
-                            <div class="swiper-slide__projects-slide__project">
-                                <div class="swiper-slide__projects-slide__project__link">
-                                    <div>< &nbsp;Krili Bangeri a.s.&nbsp; /></div>
+                                    <div>< &nbsp;Jendrulek s.r.o.&nbsp; /></div>
                                 </div>
                                 <img src="{{ asset('images/project_2.png') }}"/>
                             </div>
@@ -264,18 +275,6 @@
                                 </div>
                                 <img src="{{ asset('images/project_2.png') }}"/>
                             </div>
-                            <div class="swiper-slide__projects-slide__project">
-                                <div class="swiper-slide__projects-slide__project__link">
-                                    <div>< &nbsp;Catering J.H.&nbsp; /></div>
-                                </div>
-                                <img src="{{ asset('images/project_2.png') }}"/>
-                            </div>
-                            <div class="swiper-slide__projects-slide__project">
-                                <div class="swiper-slide__projects-slide__project__link">
-                                    <div>< &nbsp;Krili Bangeri a.s.&nbsp; /></div>
-                                </div>
-                                <img src="{{ asset('images/project_2.png') }}"/>
-                            </div>
                         </div>
                     </div>
                     <div class="swiper-slide">
@@ -283,18 +282,6 @@
                             <div class="swiper-slide__projects-slide__project">
                                 <div class="swiper-slide__projects-slide__project__link">
                                     <div>< &nbsp;Jendrulek s.r.o.&nbsp; /></div>
-                                </div>
-                                <img src="{{ asset('images/project_2.png') }}"/>
-                            </div>
-                            <div class="swiper-slide__projects-slide__project">
-                                <div class="swiper-slide__projects-slide__project__link">
-                                    <div>< &nbsp;Catering J.H.&nbsp; /></div>
-                                </div>
-                                <img src="{{ asset('images/project_2.png') }}"/>
-                            </div>
-                            <div class="swiper-slide__projects-slide__project">
-                                <div class="swiper-slide__projects-slide__project__link">
-                                    <div>< &nbsp;Krili Bangeri a.s.&nbsp; /></div>
                                 </div>
                                 <img src="{{ asset('images/project_2.png') }}"/>
                             </div>
@@ -315,7 +302,7 @@
                 </svg>
             </div>
         </section>
-        <section class="process" style="display: none;">
+        <section class="process">
             <h1>Jak to u nás chodí?</h1>
             <div class="process__header-line"></div>
             <div class="process__time-line">
@@ -360,17 +347,46 @@
                     </p>
                 </div>
                 <div class="process__description__right">
+                    <div class="process__description__contact">
+                        <div class="process__description__contact__line">
+                            <div class="line-icon">
+                                <i class="fa-solid fa-mobile-screen fa-2x"></i>
+                            </div>
+                            <div class="line-text">
+                                <p>+420 606 703 101</p>
+                            </div>
+                        </div>
+                        <div class="process__description__contact__line">
+                            <div class="line-icon">
+                                <i class="fa-solid fa-at fa-2x"></i>
+                            </div>
+                            <div class="line-text">
+                                <p>contact@ppwebs.cz</p>
+                            </div>
+                        </div>
+                        <div class="process__description__contact__line">
+                            <div class="line-icon">
+                                <i class="fa-brands fa-instagram fa-2x" style="font-weight: 900;"></i>
+                            </div>
+                            <div class="line-text">
+                                <p>@piedpiperwebsites</p>
+                            </div>
+                        </div>
+                    </div>
+                    nebo<button>Poslat formulář</button>
                 </div>
             </div>
             <div class="custom-shape-divider-bottom-1649729821">
-                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-                    <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
+                     preserveAspectRatio="none">
+                    <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+                          class="shape-fill"></path>
                 </svg>
             </div>
         </section>
-        <section class="technologies" style="display: none;">
+        <section class="technologies">
             <div class="technologies__list">
-                <img src="{{ asset('waves/technologies.svg') }}" />
+                <img src="{{ asset('waves/technologies.svg') }}"/>
                 <!-- Slider main container -->
                 <div class="swiper technologies-swiper">
                     <!-- Additional required wrapper -->
@@ -379,32 +395,33 @@
                         <div class="swiper-slide">
                             <div class="technologies__list__technologies">
                                 <div class="technologies__list__technologies__technology">
-                                    <img src="{{ asset('images/logos_javascript.png') }}" style="border-radius: 1rem; width: 12%;" />
+                                    <img src="{{ asset('images/logos_javascript.png') }}"
+                                         style="border-radius: 1rem; width: 12%;"/>
                                 </div>
                                 <div class="technologies__list__technologies__technology">
-                                    <img src="{{ asset('images/logos_php.png') }}" style="width: 22%;" />
+                                    <img src="{{ asset('images/logos_php.png') }}" style="width: 22%;"/>
                                 </div>
                                 <div class="technologies__list__technologies__technology">
-                                    <img src="{{ asset('images/logos_react.png') }}" style="width: 13%;" />
+                                    <img src="{{ asset('images/logos_react.png') }}" style="width: 13%;"/>
                                 </div>
                                 <div class="technologies__list__technologies__technology">
-                                    <img src="{{ asset('images/logos_symfony.png') }}" style="width: 13%;" />
+                                    <img src="{{ asset('images/logos_symfony.png') }}" style="width: 13%;"/>
                                 </div>
                             </div>
                         </div>
                         <div class="swiper-slide">
                             <div class="technologies__list__technologies">
                                 <div class="technologies__list__technologies__technology">
-                                    <img src="{{ asset('images/logos_node.png') }}" style="width: 13%;" />
+                                    <img src="{{ asset('images/logos_node.png') }}" style="width: 13%;"/>
                                 </div>
                                 <div class="technologies__list__technologies__technology">
-                                    <img src="{{ asset('images/logos_github.png') }}" style="width: 29%;" />
+                                    <img src="{{ asset('images/logos_github.png') }}" style="width: 29%;"/>
                                 </div>
                                 <div class="technologies__list__technologies__technology">
-                                    <img src="{{ asset('images/logos_figma.png') }}" style="width: 8%;" />
+                                    <img src="{{ asset('images/logos_figma.png') }}" style="width: 8%;"/>
                                 </div>
                                 <div class="technologies__list__technologies__technology">
-                                    <img src="{{ asset('images/logos_kril.jpg') }}" style="width: 20%;" />
+                                    <img src="{{ asset('images/logos_kril.jpg') }}" style="width: 20%;"/>
                                 </div>
                             </div>
                         </div>
@@ -422,7 +439,7 @@
                     projekt zaručuje příjemnější a rychlejší postup při vývoji.
                 </p>
                 <div class="technologies__text__image">
-                    <img src="{{ asset('images/development.jpg') }}" />
+                    <img src="{{ asset('images/development.jpg') }}"/>
                 </div>
             </div>
         </section>
