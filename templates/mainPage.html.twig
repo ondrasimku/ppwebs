@@ -47,6 +47,7 @@
                 // when window width is >= 320px
                 1360: {
                     slidesPerView: 3,
+                    spaceBetween: 0,
                 },
                 // when window width is >= 480px
                 930: {
@@ -72,6 +73,7 @@
         });
     </script>
     <script src="{{ asset('scripts/header.js') }}"></script>
+    <script src="{{ asset('scripts/process.js') }}"></script>
 {% endblock %}
 
 
@@ -87,21 +89,21 @@
             <div class="navbar__menu" id="navbar__menu">
                 <div class="navbar__menu__item">
                     <div class="navbar__menu__item__circle"></div>
-                    <a href="#">Domů</a>
+                    <a href="#" onclick="scrollToElementByClass('services')">Služby</a>
                 </div>
                 <div class="navbar__menu__item active">
                     <div class="navbar__menu__item__circle active"></div>
-                    <a href="#">O nás</a>
+                    <a href="#" onclick="scrollToElementByClass('our-projects')">Naše projekty</a>
                 </div>
                 <div class="navbar__menu__item">
                     <div class="navbar__menu__item__circle"></div>
-                    <a href="#">Naše projekty</a>
+                    <a href="#" onclick="scrollToElementByClass('technologies')">O nás</a>
                 </div>
             </div>
             <div class="navbar__contact">
                 <div class="navbar__menu__item">
                     <div class="navbar__menu__item__circle"></div>
-                    <a href="#">Kontakt</a>
+                    <a href="#" onclick="scrollToElementByClass('process')">Kontakt</a>
                 </div>
             </div>
             <div class="navbar__bar-lines" id="open-menu">
@@ -128,7 +130,7 @@
                         vytvoříme pomocí nejmodejnějších technologií a vyšvihneme ho na přední příčky vyhledávačů.
                     </p>
                     <div class="header-info__text__buttons">
-                        <button class="neon-button">Chci web!!</button>
+                        <button class="neon-button" onclick="scrollToElementByClass('process')">Chci web!!</button>
                     </div>
                 </div>
             </article>
@@ -306,41 +308,41 @@
             <h1>Jak to u nás chodí?</h1>
             <div class="process__header-line"></div>
             <div class="process__time-line">
-                <div class="process__time-line__icon active">
+                <div class="process__time-line__icon active" id="contact-us">
                     <i class="fa-solid fa-phone fa-3x"></i>
                 </div>
                 <div class="process__time-line__arrow">
                     <img src="{{ asset('images/arrow.png') }}"/>
                 </div>
-                <div class="process__time-line__icon">
+                <div class="process__time-line__icon" id="chatting">
                     <i class="fa-solid fa-comments fa-3x"></i>
                 </div>
                 <div class="process__time-line__arrow">
                     <img src="{{ asset('images/arrow.png') }}"/>
                 </div>
-                <div class="process__time-line__icon">
+                <div class="process__time-line__icon" id="design">
                     <i class="fa-solid fa-pen-ruler fa-3x"></i>
                 </div>
                 <div class="process__time-line__arrow">
                     <img src="{{ asset('images/arrow.png') }}"/>
                 </div>
-                <div class="process__time-line__icon">
+                <div class="process__time-line__icon" id="coding">
                     <i class="fa-solid fa-laptop-code fa-3x"></i>
                 </div>
                 <div class="process__time-line__arrow">
                     <img src="{{ asset('images/arrow.png') }}"/>
                 </div>
-                <div class="process__time-line__icon">
+                <div class="process__time-line__icon" id="done">
                     <i class="fa-solid fa-circle-check fa-3x"></i>
                 </div>
             </div>
             <div class="process__description">
                 <div class="process__description__left">
                     <div class="process__description__left__header">
-                        <h2>#1 &nbsp;Kontaktujete nás</h2>
-                        <div class="process__description__left__header-line"></div>
+                        <h2 id="left-header">#1 &nbsp;Kontaktujete nás</h2>
+                        <div class="process__description__left__header-line" id="left-header-line"></div>
                     </div>
-                    <p>
+                    <p id="left-text">
                         Stačí vyplnit krátký kontaktní formulář, který nám řekne základní informace o vaší webové
                         aplikaci, kterou potřebujete vytvořit. Jakmile víme o vaší poptávce bude dobré se ještě poznat a
                         vše probrat, abychom si ujasnili všechny detaily a celkový cíl vaší nové aplikace.

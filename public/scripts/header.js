@@ -1,5 +1,5 @@
-let currentActiveItem = document.getElementsByClassName('navbar__menu__item active')[0];
-let cursor = document.getElementById('cursor');
+let currentActiveItem   = document.getElementsByClassName('navbar__menu__item active')[0];
+let cursor              = document.getElementById('cursor');
 
 function headerLogic() {
     document.getElementById('open-menu').addEventListener('click', ()=>{
@@ -69,6 +69,15 @@ function itemMouseOut(item) {
 }
 
 headerLogic();
+
+function scrollToElementByClass(className) {
+    let element = document.getElementsByClassName(className)[0];
+    console.log(element);
+    scroll({
+        top: element.offsetTop-100,
+        behavior: 'smooth',
+    });
+}
 
 
 /*
