@@ -157,7 +157,7 @@
 
 .process__description__right button:hover {
     background-color: var(--pink);
-    border-color: var(--blue);
+    color: white;
     cursor: pointer;
 }
 

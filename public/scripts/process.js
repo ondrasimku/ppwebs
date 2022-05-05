@@ -38,77 +38,30 @@ for (let i = 0; i < icons.length; ++i) {
 contactUs.addEventListener('click', async () => {
     await hideLeft();
     leftHeader.innerHTML = `#1 &nbsp;KONTAKTUJETE NÁS`;
-    leftText.innerHTML = `Stačí vyplnit krátký kontaktní formulář, který nám řekne základní informace 
-    o vaší webové aplikaci, kterou potřebujete vytvořit. Jakmile víme o vaší poptávce bude dobré se 
-    ještě poznat a vše probrat, abychom si ujasnili všechny detaily a celkový cíl vaší nové aplikace.`;
+    leftText.innerHTML = `Gratulujeme! rozhodli jste se pro první krok k úspěšnému podnikání. 
+    Váš první krok začíná zde na webu, kontaktujte nás pomocí telefonního čísla, emailu, nebo formuláře. 
+    My se vám obratem ozveme a domluvíme si s vámi schůzku, kde se vás budeme ptát na vaše cíle, konkurenci a plány.`;
     await showLeft();
 });
 
 chatting.addEventListener('click', async () => {
     await hideLeft();
-    leftHeader.innerHTML = `#2 &nbsp;NAPÍŠEME KRILOVI`;
-    leftText.innerHTML = `Ledový mám srdce
-Pičo ledový mám pocity
-Pochyby mám o tom píčo
-Že to dávno nejsi ty
-
-Zmrdi si, už dovolují
-Vylejzi, vylejzaj z ulity
-Dávno není holka
-Holka dělá jenom cavyky
-
-Kluk se mění v holku
-Hoe mu nastavila pokyny
-Kluk už není kluk vole
-Kluk je tak z poloviny
-
-Lidi co bývali znamení
-Dnes mě chtěli potopit
-Zmrdi dáva, dávaj ready
-Chtějí mě snad asi pobavit
-Říkám nemůžeš mě zničit
-Nemůžeš mě zastavit
-Když mám v ruce mic
-Tak se všichni musí posadit
-
-Vidím všude obrazy
-Všude vidím vize
-Slyším taky hlasy
-Ale, ale je vyplá televize
-
-Tenhle příběh není o vole
-Ani žádný knize
-Musím jít na výslech
-To psaní je v dopise
-
-Všechny vzpomínky, jsou pryč
-Je to dávno pase
-Jako malej kluk mi říkal
-Že skončím v base
-
-Slyším to od rodiny znovu zas
-A slyším to furt dokola dva roky v kuse
-Makal jsem pro rodinu
-No usínal jsem v buse
-
-Z práce je dennodenně mise
-Dávám cannabis
-Píčo zelený mám plíce
-A nejdelší jsou rady`;
+    leftHeader.innerHTML = `#2 &nbsp;VYŘEŠÍME NÁLEŽITOSTI`;
+    leftText.innerHTML = `Ozveme se vám zpět a domluvíme se, jaký druh komunikace 
+    vám bude nejvíce vyhovovat (osobní schůzky, telefonní hovory, online meetingy, emaily, etc.). 
+    Poté se vás budeme ptát. Na váš produkt, vaši cílovou 
+    skupinu, konkurenci, preferovaný design a mnoho dalšího. Až si budeme jistí, že toho víme vše potřebné, 
+    pustíme se do designování vašeho webu`;
     await showLeft();
 });
 
 design.addEventListener('click', async () => {
     await hideLeft();
     leftHeader.innerHTML = `#3 &nbsp;NAVRHNEME DESIGN`;
-    leftText.innerHTML = `Kdyz je obsazino tak du rysovat na damskej
-Kdyz vyprcam kundu je vyprcana jak stranskej
-A kdyz motam buka tak sou dlouhy jak dvanactky
-Uz mi neni osmnact ale v kapse 18K<br><br>
-Sorry mamo delam spinavej rap muj spinavej zivot ma stavu jak grap
-Fresh jak zmrd obcas horkej az tak ze ti pokrivi ten xicht jak slap
-Furt du nahoru step by step a na dne drinku krystal jak strep
-Castokrat vidim dvojmo stejne se pokazdy trefim na stred`;
+    leftText.innerHTML = `Jakmile skončí schůzka pustíme se do návrhu vašeho webu, a co nejdříve 
+    se na vás obrátíme s první prototypem. Poté se domluvíme na tom, co vám na webu vyhovuje, 
+    a co byste naopak chtěli jinak. Přetvoříme design podle vašich požadavků a návrh vám opět 
+    zašleme, takto budeme postupovat, dokud nebudete s designem webu spokojení.`;
     await showLeft();
 });
 

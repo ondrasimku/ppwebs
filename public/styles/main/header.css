@@ -183,7 +183,7 @@ nav a {
 .header-info__devices #devices {
     position: absolute;
     z-index: 2;
-    top: 50%;
+    top: 52%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 60%;
@@ -232,8 +232,6 @@ nav a {
     text-transform: uppercase;
     font-size: 3.8rem;
     padding-bottom: 1rem;
-    text-shadow:
-            0 0 5px #fff;
 }
 
 .header-info__text p {
@@ -569,7 +567,7 @@ nav a {
         margin-top: 8%;
     }
     .navbar--active {
-        width: 66%;
+        width: 78%;
     }
 }
 

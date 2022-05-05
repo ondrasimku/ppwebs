@@ -36,7 +36,7 @@
 }
 
 .services__cards__card {
-    width: 23rem;
+    width: 24rem;
     color: var(--blue);
 }
 
@@ -59,7 +59,7 @@
 }
 
 .services__cards__card__text {
-    padding: 1rem 2rem 0 2rem;
+    padding: 1rem 2.5rem 0 2.5rem;
     font-size: 1.2rem;
     font-weight: 300;
     text-align: center;

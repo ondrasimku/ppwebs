@@ -95,7 +95,7 @@
 
 .swiper.projects-swiper .swiper-button-next, .swiper-button-prev {
     color: var(--pink) !important;
-    top: 8rem !important;
+    top: 14rem !important;
 }
 
 .swiper.projects-swiper .swiper-pagination-bullet {
@@ -121,10 +121,9 @@
 }
 
 .swiper-slide__projects-slide__project {
-    height: 13rem;
+    height: 28rem;
     position: relative;
     cursor: pointer;
-    box-shadow: 0 14px 23px 0 rgba(0, 0, 0, 0.7);
 }
 
 .swiper-slide__projects-slide__project img {
@@ -203,11 +202,11 @@
     }
 
     .swiper-slide__projects-slide__project {
-        height: 9rem;
+        height: 23rem;
     }
 
     .swiper.projects-swiper .swiper-button-next, .swiper-button-prev {
-        top: 5rem !important;
+        top: 11rem !important;
     }
 
     .our-projects__circle:nth-of-type(4) {
@@ -249,5 +248,15 @@
 
     .our-projects__circle:nth-of-type(2) {
         display: none;
+    }
+}
+
+@media only screen and (max-width: 467px) {
+    .swiper-slide__projects-slide__project {
+        height: 23rem;
+    }
+
+    .swiper.projects-swiper .swiper-button-next, .swiper-button-prev {
+        top: 11rem !important;
     }
 }
