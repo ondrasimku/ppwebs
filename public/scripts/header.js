@@ -6,7 +6,6 @@ function headerLogic() {
         let navbar = document.getElementById('navbar');
         navbar.className = "navbar--active";
         navbar.style.opacity = "1";
-        console.log("click");
     });
 
     document.getElementById('close-menu').addEventListener('click', ()=>{
@@ -16,7 +15,6 @@ function headerLogic() {
     //
     let menuItems = document.getElementsByClassName('navbar__menu__item');
     let currentActiveCircle = document.getElementsByClassName('navbar__menu__item__circle active')[0];
-    console.log(currentActiveCircle);
     for(let menuItem of menuItems) {
         menuItem.addEventListener('click', ()=>{
             setActiveItem(menuItem);
@@ -42,7 +40,6 @@ function headerLogic() {
 
 // switches activated items, make the new one bold and shows it's circle
 function setActiveItem(newItem) {
-    console.log(newItem);
     currentActiveItem.children[0].className = "navbar__menu__item__circle";
     newItem.children[0].className = "navbar__menu__item__circle active"; // set circle as active
     currentActiveItem.className = "navbar__menu__item"; // unmark active item
@@ -72,7 +69,6 @@ headerLogic();
 
 function scrollToElementByClass(className) {
     let element = document.getElementsByClassName(className)[0];
-    console.log(element);
     scroll({
         top: element.offsetTop-100,
         behavior: 'smooth',
