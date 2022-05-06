@@ -67,10 +67,8 @@ design.addEventListener('click', async () => {
 
 coding.addEventListener('click', async () => {
     await hideLeft();
-    leftHeader.innerHTML = `#4 &nbsp;GARGULÁK TO NAPROGRAMUJE`;
-    leftText.innerHTML = `Ovládá php, v nějaké fázi. takže zhruba ví jak to funguje celé, nejčastěji php používá u Wordpresů. Plus chápe dotazy do databáze pomocí Mysql.
-    BEM je metodologie zápisu tříd do html tagů. Může klidně použít je-li to vaším přáním. Ovládá HTML5 a CSS3. Poradí si s jakýmkoliv designem a někdy je nutné si vzít 
-    trochu času na rozmyšlení, prostě to vymyslet. Kod má vždy zformátovaný.`;
+    leftHeader.innerHTML = `#4 &nbsp;PUSTÍME SE DO VÝVOJE`;
+    leftText.innerHTML = ``;
     await showLeft();
 });
 
