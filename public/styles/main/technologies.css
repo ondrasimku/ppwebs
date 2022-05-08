@@ -38,7 +38,7 @@
 
 .technologies__list__technologies__technology {
     background-color: var(--white-background);
-    box-shadow: 0 10px 16px 0 rgba(0,0,0,0.5);
+
     border-radius: 2rem;
     display: flex;
     justify-content: center;
@@ -60,8 +60,8 @@
     font-weight: 900;
     text-transform: uppercase;
     color: white;
-    text-shadow:
-            0 0 2px white;
+    letter-spacing: 4px;
+
 }
 
 .technologies__text__header-line {

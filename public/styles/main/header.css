@@ -7,11 +7,13 @@ header {
 
 .navbar {
     cursor: none !important;
-    height: 6rem;
+    height: 4rem;
     background-color: var(--blue);
     display: flex;
     flex-direction: row;
     z-index: 10;
+
+    width: 100%;
 }
 
 .navbar__close {
@@ -47,7 +49,7 @@ header {
 }
 
 .navbar__icon img {
-    max-width: 13rem;
+    max-width: 10rem;
 }
 .navbar__icon img:hover {
     /* cursor: pointer; */
@@ -158,7 +160,7 @@ nav a {
     text-decoration: none;
     text-transform: uppercase;
     color: white;
-    font-size: 1.34rem;
+    font-size: 1rem;
     font-weight: 300;
     letter-spacing: 2px;
 }
@@ -184,9 +186,9 @@ nav a {
     position: absolute;
     z-index: 2;
     top: 52%;
-    left: 50%;
+    left: 45%;
     transform: translate(-50%, -50%);
-    width: 60%;
+    width: 80%;
 }
 
 .header-info__circle:nth-of-type(1) {
@@ -225,6 +227,15 @@ nav a {
     width: 100%;
     margin: auto;
     color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:4rem;
+}
+
+.header-info__text>div img{
+    width: 25rem;
+    margin: auto;
 }
 
 .header-info__text h2 {
@@ -235,17 +246,23 @@ nav a {
 }
 
 .header-info__text p {
-    color: #c9c9c9;
-    width: 83%;
-    padding-right: 5%;
+    color: #e5e5e5;
+
+
     text-align: justify;
     font-weight: 200;
     font-size: 1.4rem;
     line-height: 1.7rem;
+    margin: 0;
+
+}
+
+.mrdina{
+
 }
 
 .header-info__text b {
-    font-weight: 200;
+    font-weight: 600;
 }
 
 .header-info__text__buttons {
@@ -253,9 +270,9 @@ nav a {
 }
 
 .header-info__text button {
-    border: 4px solid var(--pink);
+    border: 2px solid var(--pink);
     border-radius: 0.5rem;
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     font-weight: 800;
     background-color: transparent;
     color: white;
@@ -506,8 +523,7 @@ nav a {
         font-size: 3rem;
         text-align: center;
         padding-bottom: 1rem;
-        text-shadow:
-                0 0 5px #fff;
+
     }
 
     .header-info__text p {
