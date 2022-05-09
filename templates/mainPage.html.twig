@@ -8,10 +8,12 @@
           rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('styles/main/header.css') }}">
     <link rel="stylesheet" href="{{ asset('styles/main/main.css') }}">
+    <link rel="stylesheet" href="{{ asset('styles/main/footer.css') }}">
     <link rel="stylesheet" href="{{ asset('styles/main/services.css') }}">
     <link rel="stylesheet" href="{{ asset('styles/main/our-projects.css') }}">
     <link rel="stylesheet" href="{{ asset('styles/main/process.css') }}">
     <link rel="stylesheet" href="{{ asset('styles/main/technologies.css') }}">
+    <link rel="stylesheet" href="{{ asset('styles/main/contact-form.css') }}">
     <link
             rel="stylesheet"
             href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
@@ -124,8 +126,8 @@
                 <img src="{{ asset('waves/circle.svg') }}" class="header-info__circle"/>
                 <img src="{{ asset('waves/circle.svg') }}" class="header-info__circle"/>
                 <div>
-                    <img src="{{ asset('images/logo.png') }}"/>
-                    <div class="mrdina">
+                    <img class="logo" src="{{ asset('images/logo.png') }}"/>
+                    <div >
                         <h2>Moderní weby na míru</h2>
                         <p>
                             V dnešní době je obzvláště <b>důležité prezentovat se online</b>, je to jeden z hlavních kroků k
@@ -268,9 +270,9 @@
                         <div class="swiper-slide__projects-slide">
                             <div class="swiper-slide__projects-slide__project">
                                 <div class="swiper-slide__projects-slide__project__link">
-                                    <div>< &nbsp;Jendrulek s.r.o.&nbsp; /></div>
+                                    <div>< &nbsp;Catering&nbsp; /></div>
                                 </div>
-                                <img src="{{ asset('images/project_jendrulek.png') }}"/>
+                                <img src="{{ asset('images/project_catering.png') }}"/>
                             </div>
                         </div>
                     </div>
@@ -368,7 +370,7 @@
                                 <i class="fa-solid fa-at fa-2x"></i>
                             </div>
                             <div class="line-text">
-                                <p>ondra@simku.cz</p>
+                                <p>info@ppwebs.cz</p>
                             </div>
                         </div>
                         <div class="process__description__contact__line">
@@ -392,6 +394,7 @@
                 </svg>
             </div>
         </section>
+
         <section class="technologies">
             <div class="technologies__list">
                 <img src="{{ asset('waves/technologies.svg') }}"/>
@@ -450,6 +453,69 @@
                     <img src="{{ asset('images/development.jpg') }}"/>
                 </div>
             </div>
+            <section class="contact-form">
+                <div class="contact-form__left">
+                    <h2 id="heading-device-smaller">KONTAKTUJTE NÁS</h2>
+                    <img src="{{ asset('images/paper-plane.png') }}"/>
+                    <div class="contact-form__contact-info">
+
+                        <div class="contact-form__contact-info__contact">
+                            <i class="fa-solid fa-at fa-2x"></i>
+                            <span>info@ppwebs.cz</span>
+                        </div>
+                        <div class="contact-form__contact-info__contact">
+                            <i class="fa-solid fa-phone fa-2x"></i>
+                            <span>+420 602 145 409</span>
+                        </div>     <div class="contact-form__contact-info__contact">
+                            <i class="fa-brands fa-instagram fa-2x"></i>
+                            <span>@piedpiperwebsites</span>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="contact-form__right">
+
+                    <form>
+                        <h2 id="heading-device-bigger">KONTAKTUJTE NÁS</h2>
+                        <input placeholder="Jméno" id="name" type="text" required/>
+                        <input placeholder="Email" id="email" type="email" required/>
+                        <input placeholder="Telefon" id="phone" type="tel"/>
+                        <textarea placeholder="Zpráva" id="message"></textarea>
+                        <button>Odeslat</button>
+                    </form>
+                </div>
+            </section>
         </section>
+        <footer>
+            <div class="main-section">
+            <div >
+                <a>SLUŽBY</a>
+                <a>O NÁS</a>
+                <a>NAŠE PROJEKTY</a>
+                <a>KONTAKT</a>
+            </div>
+            <div >
+                <div class="contact-form__contact-info__contact">
+                    <i class="fa-solid fa-at fa-2x"></i>
+                    <span>@piedpiperwebsites</span>
+                </div>
+                <div class="contact-form__contact-info__contact">
+                    <i class="fa-solid fa-phone fa-2x"></i>
+                    <span>+420 602 145 409</span>
+                </div>
+                    <div class="contact-form__contact-info__contact">
+                    <i class="fa-brands fa-instagram fa-2x"></i>
+                    <span>@piedpiperwebsites</span>
+                </div>
+            </div>
+            <div class="logo">
+                <img  class="logo" src="{{ asset('images/logo.png') }}"/>
+            </div>
+            </div>
+        <div class="contact-us">
+            <h3>ZÍSKEJTE NEZÁVAZNOU CENOVOU NABÍDKU NEBO KONZULTACI</h3>
+            <span>+420 602 145 409</span>
+        </div>
+        </footer>
     </main>
 {% endblock %}

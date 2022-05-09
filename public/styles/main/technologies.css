@@ -61,6 +61,7 @@
     text-transform: uppercase;
     color: white;
     letter-spacing: 4px;
+    letter-spacing: 4px;
 
 }
 
@@ -109,7 +110,7 @@
     .technologies__list {
         width: 100%;
         padding: 0;
-        margin-top: 13%;
+        margin-top: 15rem;
     }
 
     .technologies__list img {
@@ -199,7 +200,7 @@
     }
 
     .technologies__list {
-        margin-top: 18%;
+        margin-top: 15rem;
     }
 
 

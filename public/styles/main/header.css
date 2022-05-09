@@ -1,10 +1,13 @@
 header {
-    height: 64rem;
+    height: 60rem;
     position: relative;
     background: rgb(63,55,201);
     background: linear-gradient(0deg, rgba(63,55,201,1) 21%, rgba(58,12,163,1) 48%);
 }
 
+.header-info__text .logo {
+    display: none;
+}
 .navbar {
     cursor: none !important;
     height: 4rem;
@@ -169,6 +172,7 @@ nav a {
 .header-info {
     display: flex;
     flex-direction: row;
+    align-items: center;
 }
 
 .header-info__devices {
@@ -231,6 +235,8 @@ nav a {
     flex-direction: column;
     align-items: center;
     gap:4rem;
+    margin-bottom: 20rem;
+
 }
 
 .header-info__text>div img{
@@ -257,9 +263,6 @@ nav a {
 
 }
 
-.mrdina{
-
-}
 
 .header-info__text b {
     font-weight: 600;
@@ -281,12 +284,12 @@ nav a {
     transition: all 0.3s ease;
 }
 
+
 .header-info__text button:hover {
     transform: translateY(-1rem);
     background-color: var(--pink);
     cursor: pointer;
 }
-
 
 
 /* BOTTOM DIVIDER */
@@ -314,6 +317,10 @@ nav a {
 /* RESPONSIVE */
 
 @media only screen and (max-width: 1110px) {
+    .header-info__text .logo {
+     display: block;
+    }
+
     header {
         background: var(--purple);
     }
@@ -349,6 +356,8 @@ nav a {
         justify-content: flex-start;
         z-index: 10;
     }
+
+
 
     .navbar--active .navbar__close {
         display: block;
@@ -498,6 +507,7 @@ nav a {
         display: flex;
         flex-direction: column-reverse;
         margin-bottom: 10rem;
+        align-items: flex-start;
     }
 
     .header-info__devices {
