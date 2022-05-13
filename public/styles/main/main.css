@@ -68,3 +68,7 @@ body {
     background-color: var(--purple);
     font-family: 'Kanit';
 }
+
+.gradient-background{
+    background: linear-gradient(0deg, rgba(63,55,201,1) 36%, rgba(58,12,163,1) 80%);
+}

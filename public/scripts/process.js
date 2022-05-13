@@ -68,14 +68,14 @@ design.addEventListener('click', async () => {
 coding.addEventListener('click', async () => {
     await hideLeft();
     leftHeader.innerHTML = `#4 &nbsp;PUSTÍME SE DO VÝVOJE`;
-    leftText.innerHTML = ``;
+    leftText.innerHTML = `Po návrhu designu se pustíme do samotného vývoje, během této fáze s vámi budeme dolaďovat textový obsah a chování stránky jako takové, na konci této fáze bude váš web hotový. `;
     await showLeft();
 });
 
 done.addEventListener('click', async () => {
     await hideLeft();
-    leftHeader.innerHTML = `#5 &nbsp;DONE`;
-    leftText.innerHTML = `Swag`;
+    leftHeader.innerHTML = `#5 &nbsp;HOTOVO!`;
+    leftText.innerHTML = `V této fázi s vámi doladíme poslední detaily a dodáme vám výsledný produkt, případně společně vyřešíme doménu a hosting samotných stránek 😊  `;
     await showLeft();
 });
 

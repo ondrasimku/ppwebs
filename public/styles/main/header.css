@@ -512,6 +512,8 @@ nav a {
 
     .header-info__devices {
         width: 80%;
+        top: 20%;
+        left: 20%;
     }
 
     .header-info__devices #devices {

@@ -1,9 +1,7 @@
 .technologies {
     display: flex;
     flex-direction: row;
-    background: rgba(63,55,201,1);
-    background: linear-gradient(0deg, rgba(63,55,201,1) 36%, rgba(58,12,163,1) 80%);
-    padding: 4rem 0 30rem 0;
+    padding: 4rem 0 10rem 0;
 }
 
 .technologies__list {
@@ -50,8 +48,8 @@
 
 
 .technologies__text {
-    width: 50%;
-    padding: 0 6% 0 5%;
+
+
 }
 
 .technologies__text h1 {
