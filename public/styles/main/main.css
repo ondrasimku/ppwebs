@@ -1,7 +1,7 @@
 /* CSS RESET */
 html {
     box-sizing: border-box;
-    font-size: 13px;
+    font-size: 14px;
 }
 
 *, *:before, *:after {
@@ -72,3 +72,6 @@ body {
 .gradient-background{
     background: linear-gradient(0deg, rgba(63,55,201,1) 36%, rgba(58,12,163,1) 80%);
 }
+
+
+

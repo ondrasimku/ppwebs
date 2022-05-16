@@ -1,10 +1,23 @@
 header {
-    height: 60rem;
+    height: 100rem;
     position: relative;
     background: rgb(63,55,201);
     background: linear-gradient(0deg, rgba(63,55,201,1) 21%, rgba(58,12,163,1) 48%);
+
+
+}
+@media only screen and (max-width: 2000px) {
+ header{
+     height: 80rem;
+ }
 }
 
+
+@media only screen and (max-width: 1450px) {
+    header{
+        height: 65rem;
+    }
+}
 .header-info__text .logo {
     display: none;
 }
@@ -173,6 +186,7 @@ nav a {
     display: flex;
     flex-direction: row;
     align-items: center;
+
 }
 
 .header-info__devices {
@@ -314,6 +328,11 @@ nav a {
     fill: #FFFFFF;
 }
 
+.mobile-devices{
+    display: none;
+    min-width: 70%;
+}
+
 /* RESPONSIVE */
 
 @media only screen and (max-width: 1110px) {
@@ -322,7 +341,8 @@ nav a {
     }
 
     header {
-        background: var(--purple);
+        background: linear-gradient(0deg, rgba(63,55,201,1) 21%, rgba(58,12,163,1) 48%);
+
     }
 
     #cursor {
@@ -511,9 +531,13 @@ nav a {
     }
 
     .header-info__devices {
+        display: none;
         width: 80%;
         top: 20%;
         left: 20%;
+    }
+    .mobile-devices{
+        display: block;
     }
 
     .header-info__devices #devices {
@@ -579,20 +603,18 @@ nav a {
         display: none;
     }
 
-    .services {
-        margin-top: 17%;
-    }
+
 }
 
-@media only screen and (max-width: 840px) {
-    .services {
-        margin-top: 5%;
-    }
+@media only screen and (max-width: 1110px) {
+   header{
+       height: 80rem;
+   }
 }
 
 @media only screen and (max-width: 580px) {
     .services {
-        margin-top: 8%;
+
     }
     .navbar--active {
         width: 78%;
@@ -601,12 +623,18 @@ nav a {
 
 @media only screen and (max-width: 408px) {
     .services {
-        margin-top: 30%;
+ height: 80rem;
     }
 }
 
 @media only screen and (max-width: 337px) {
     .services {
-        margin-top: 40%;
+       height: 80rem;
+    }
+}
+
+@media only screen and (max-width: 276px) {
+    .services {
+        height: 90rem;
     }
 }

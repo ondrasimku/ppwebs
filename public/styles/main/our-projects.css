@@ -1,9 +1,8 @@
 .our-projects {
     position: relative;
-    padding-top: 2rem;
-    padding-bottom: 12rem;
-    background: rgb(63, 55, 201);
-    background: linear-gradient(0deg, rgba(63, 55, 201, 1) 35%, rgba(58, 12, 163, 1) 60%);
+    padding-top: 10rem;
+    padding-bottom: 5rem;
+
 }
 
 .our-projects__circle:nth-of-type(1) {

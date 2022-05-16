@@ -12,12 +12,14 @@
     <link rel="stylesheet" href="{{ asset('styles/main/services.css') }}">
     <link rel="stylesheet" href="{{ asset('styles/main/our-projects.css') }}">
     <link rel="stylesheet" href="{{ asset('styles/main/process.css') }}">
-    <link rel="stylesheet" href="{{ asset('styles/main/technologies.css') }}">
     <link rel="stylesheet" href="{{ asset('styles/main/contact-form.css') }}">
+    <link rel="stylesheet" href="{{ asset('styles/main/additional-info.css') }}">
+    <link rel="stylesheet" href="{{ asset('styles/main/web-apps.css') }}">
     <link
             rel="stylesheet"
             href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
     />
+
 {% endblock %}
 {% block javascripts %}
     <script src="https://kit.fontawesome.com/8a752f54a0.js" crossorigin="anonymous"></script>
@@ -78,11 +80,12 @@
     </script>
     <script src="{{ asset('scripts/header.js') }}"></script>
     <script src="{{ asset('scripts/process.js') }}"></script>
+    <script src="{{ asset('scripts/form.js') }}"></script>
+
 {% endblock %}
 
 
 {% block body %}
-    <audio src="{{ asset('sounds/kril.mp3') }}"></audio>
     <header>
         <nav class="navbar" id="navbar">
             <div class="navbar__close" id="close-menu">✖</div>
@@ -101,7 +104,11 @@
                 </div>
                 <div class="navbar__menu__item">
                     <div class="navbar__menu__item__circle"></div>
-                    <a href="javascript:void(0);" onclick="scrollToElementByClass('technologies')">O nás</a>
+                    <a href="javascript:void(0);" onclick="scrollToElementByClass('additional-info')">Služby navíc</a>
+                </div>
+                <div class="navbar__menu__item">
+                    <div class="navbar__menu__item__circle"></div>
+                    <a href="javascript:void(0);" onclick="scrollToElementByClass('web-apps')">Webové aplikace</a>
                 </div>
             </div>
             <div class="navbar__contact">
@@ -140,6 +147,7 @@
                             <button onclick="scrollToElementByClass('process')">Chci web!!</button>
                         </div>
                     </div>
+                    <img src="{{ asset('images/devices-phone.png') }}" class="mobile-devices">
                 </div>
             </article>
         </section>
@@ -229,87 +237,6 @@
                     </div>
                 </article>
             </div>
-            <div class="custom-shape-divider-bottom-1649647244">
-                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
-                     preserveAspectRatio="none">
-                    <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z"
-                          opacity=".25" class="shape-fill"></path>
-                    <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z"
-                          opacity=".5" class="shape-fill"></path>
-                    <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z"
-                          class="shape-fill"></path>
-                </svg>
-            </div>
-        </section>
-        <section class="our-projects">
-            <img src="{{ asset('waves/circle.svg') }}" class="our-projects__circle"/>
-            <img src="{{ asset('waves/circle.svg') }}" class="our-projects__circle"/>
-            <img src="{{ asset('waves/circle.svg') }}" class="our-projects__circle"/>
-            <img src="{{ asset('waves/circle.svg') }}" class="our-projects__circle"/>
-            <img src="{{ asset('waves/circle.svg') }}" class="our-projects__circle"/>
-            <div class="our-projects__header">
-                <h1>Naše projekty</h1>
-            </div>
-            <div class="our-projects__header__header-line"></div>
-            <!-- Slider main container -->
-            <div class="swiper projects-swiper">
-                <!-- Additional required wrapper -->
-                <div class="swiper-wrapper">
-                    <!-- Slides -->
-                    <div class="swiper-slide">
-                        <div class="swiper-slide__projects-slide">
-                            <div class="swiper-slide__projects-slide__project">
-                                <div class="swiper-slide__projects-slide__project__link">
-                                    <div>< &nbsp;Cyber Racoon&nbsp; /></div>
-                                </div>
-                                <img src="{{ asset('images/project_cyber_racoon.png') }}"/>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="swiper-slide__projects-slide">
-                            <div class="swiper-slide__projects-slide__project">
-                                <div class="swiper-slide__projects-slide__project__link">
-                                    <div>< &nbsp;Catering&nbsp; /></div>
-                                </div>
-                                <img src="{{ asset('images/project_catering.png') }}"/>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="swiper-slide__projects-slide">
-                            <div class="swiper-slide__projects-slide__project">
-                                <div class="swiper-slide__projects-slide__project__link">
-                                    <div>< &nbsp;Dropshipping 2k22&nbsp; /></div>
-                                </div>
-                                <img src="{{ asset('images/project_dropshipping.png') }}"/>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="swiper-slide__projects-slide">
-                            <div class="swiper-slide__projects-slide__project">
-                                <div class="swiper-slide__projects-slide__project__link">
-                                    <div>< &nbsp;PPWebS&nbsp; /></div>
-                                </div>
-                                <img src="{{ asset('images/project_ppwebs.png') }}"/>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- If we need pagination -->
-                <div class="swiper-pagination"></div>
-
-                <!-- If we need navigation buttons -->
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-button-next"></div>
-            </div>
-            <div class="custom-shape-divider-bottom-1649647325">
-                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
-                     preserveAspectRatio="none">
-                    <path d="M1200 120L0 16.48 0 0 1200 0 1200 120z" class="shape-fill"></path>
-                </svg>
-            </div>
         </section>
         <section class="process">
             <h1>Jak to u nás chodí?</h1>
@@ -395,73 +322,80 @@
             </div>
         </section>
         <section class="gradient-background">
-        <section class="technologies">
-            <div class="technologies__list">
-                <img src="{{ asset('waves/technologies.svg') }}"/>
+            <section class="our-projects">
+                <img src="{{ asset('waves/circle.svg') }}" class="our-projects__circle"/>
+                <img src="{{ asset('waves/circle.svg') }}" class="our-projects__circle"/>
+                <img src="{{ asset('waves/circle.svg') }}" class="our-projects__circle"/>
+                <img src="{{ asset('waves/circle.svg') }}" class="our-projects__circle"/>
+                <img src="{{ asset('waves/circle.svg') }}" class="our-projects__circle"/>
+                <div class="our-projects__header">
+                    <h1>Naše projekty</h1>
+                </div>
+                <div class="our-projects__header__header-line"></div>
                 <!-- Slider main container -->
-                <div class="swiper technologies-swiper">
+                <div class="swiper projects-swiper">
                     <!-- Additional required wrapper -->
                     <div class="swiper-wrapper">
                         <!-- Slides -->
                         <div class="swiper-slide">
-                            <div class="technologies__list__technologies">
-                                <div class="technologies__list__technologies__technology">
-                                    <img src="{{ asset('images/logos_javascript.png') }}"
-                                         style="border-radius: 1rem; width: 12%;"/>
-                                </div>
-                                <div class="technologies__list__technologies__technology">
-                                    <img src="{{ asset('images/logos_php.png') }}" style="width: 22%;"/>
-                                </div>
-                                <div class="technologies__list__technologies__technology">
-                                    <img src="{{ asset('images/logos_react.png') }}" style="width: 13%;"/>
-                                </div>
-                                <div class="technologies__list__technologies__technology">
-                                    <img src="{{ asset('images/logos_symfony.png') }}" style="width: 13%;"/>
+                            <div class="swiper-slide__projects-slide">
+                                <div class="swiper-slide__projects-slide__project">
+                                    <div class="swiper-slide__projects-slide__project__link">
+                                        <div>< &nbsp;Cyber Racoon&nbsp; /></div>
+                                    </div>
+                                    <img src="{{ asset('images/project_cyber_racoon.png') }}"/>
                                 </div>
                             </div>
                         </div>
                         <div class="swiper-slide">
-                            <div class="technologies__list__technologies">
-                                <div class="technologies__list__technologies__technology">
-                                    <img src="{{ asset('images/logos_node.png') }}" style="width: 13%;"/>
+                            <div class="swiper-slide__projects-slide">
+                                <div class="swiper-slide__projects-slide__project">
+                                    <div class="swiper-slide__projects-slide__project__link">
+                                        <div>< &nbsp;Catering&nbsp; /></div>
+                                    </div>
+                                    <img src="{{ asset('images/project_catering.png') }}"/>
                                 </div>
-                                <div class="technologies__list__technologies__technology">
-                                    <img src="{{ asset('images/logos_github.png') }}" style="width: 29%;"/>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="swiper-slide__projects-slide">
+                                <div class="swiper-slide__projects-slide__project">
+                                    <div class="swiper-slide__projects-slide__project__link">
+                                        <div>< &nbsp;Dropshipping 2k22&nbsp; /></div>
+                                    </div>
+                                    <img src="{{ asset('images/project_dropshipping.png') }}"/>
                                 </div>
-                                <div class="technologies__list__technologies__technology">
-                                    <img src="{{ asset('images/logos_figma.png') }}" style="width: 8%;"/>
-                                </div>
-                                <div class="technologies__list__technologies__technology">
-                                    <img src="{{ asset('images/logos_kril.jpg') }}" style="width: 20%;"/>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="swiper-slide__projects-slide">
+                                <div class="swiper-slide__projects-slide__project">
+                                    <div class="swiper-slide__projects-slide__project__link">
+                                        <div>< &nbsp;PPWebS&nbsp; /></div>
+                                    </div>
+                                    <img src="{{ asset('images/project_ppwebs.png') }}"/>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <!-- If we need scrollbar -->
-                    <div class="swiper-scrollbar"></div>
+                    <!-- If we need pagination -->
+                    <div class="swiper-pagination"></div>
+
+                    <!-- If we need navigation buttons -->
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
                 </div>
-            </div>
-            <div>
-            <div class="technologies__text">
-                <h1>S jakými technologiemi vyvijíme</h1>
-                <div class="technologies__text__header-line"></div>
-                <p>
-                    Používání správných technologiích ve správný čas je naše mantra. Jsme agilní a rádi se učíme nové
-                    postupy a nástroje abychom zrychlili vývoj a snížili komplexitu. Výběr adekvátní technologie pro Váš
-                    projekt zaručuje příjemnější a rychlejší postup při vývoji.
-                </p>
-                <div class="technologies__text__image">
-                    <img src="{{ asset('images/development.jpg') }}"/>
-                </div>
-            </div>
-        </div>
-        </section>
+            </section>
             <section class="contact-form">
+                <span>
+                <h2>Kontaktujte nás</h2>
+                <div class="contact-form__heading-line"></div>
+                </span>
+                <div>
                 <div class="contact-form__left">
-                    <h2 id="heading-device-smaller">KONTAKTUJTE NÁS</h2>
+
                     <img src="{{ asset('images/paper-plane.png') }}"/>
                     <div class="contact-form__contact-info">
-
                         <div class="contact-form__contact-info__contact">
                             <i class="fa-solid fa-at fa-2x"></i>
                             <span>info@ppwebs.cz</span>
@@ -473,13 +407,10 @@
                             <i class="fa-brands fa-instagram fa-2x"></i>
                             <span>@piedpiperwebsites</span>
                         </div>
-
                     </div>
                 </div>
                 <div class="contact-form__right">
-
-                    <form>
-                        <h2 id="heading-device-bigger">KONTAKTUJTE NÁS</h2>
+                    <form onsubmit="formOnclick()" id="contact-form">
                         <input placeholder="Jméno" id="name" type="text" required/>
                         <input placeholder="Email" id="email" type="email" required/>
                         <input placeholder="Telefon" id="phone" type="tel"/>
@@ -487,15 +418,67 @@
                         <button>Odeslat</button>
                     </form>
                 </div>
+                </div>
             </section>
+        </section>
+        <section class="additional-info">
+
+            <div>
+                <h2>SLUŽBY NAVÍC</h2>
+            <div class="additional-info__header-line"></div>
+            </div>
+            <div class="additional-info__element">
+
+                <div>
+                    <img src="/images/help-with-running-illustration.svg"/>
+                </div>
+                <div class="additional-info__element__text">
+                    <h3>Pomoc se zprovozněním <b>webu</b></h3>
+                    <p>Pokud nemáte webové technologie pod palcem, nebo se vám jen nechtějí řešit technikálie kolem webové stránky nezoufejte, V případě potřeby vám rádi pomůžeme s registrací domény, přesměrováním DNS i se samotným hostingem :-) </p>
+                </div>
+            </div>
+            <div class="additional-info__element">
+                <div class="additional-info__element__text">
+                    <h3>Správa webu po jeho  <b>dokončení </b></h3>
+                    <p>Dokončením webu to teprve začíná, rádi se vám postaráme o softwarové aktualizace, správu obsahu i monitoring samotného webu</p>
+                </div>
+                <div>
+                    <img src="/images/help-with-content-illustration.svg"/>
+                </div>
+            </div>
+        </section>
+        <section class="web-apps">
+            <div>
+            <h2>Webové aplikace</h2>
+            <div class="web-apps__header-line"></div>
+            </div>
+            <p>Webové aplikace narozdíl od běžných statických webu (jako je například ptezentační web produktu) nejsou jen samotná webová stránka, skrýva se pod nimi logika, která umožnuje uživateli interagovat s obsahem webu a v závistlosti na tom web měnit. webové aplikace mohou sloužit k různorodým účelům,  od interních systému (evidence skladu, zaměstnanecké systémy..) po aplikace určené pro veřejnost (eshopy, blogy se správou obsahu, atd.).</p>
+            <div class="web-apps__content">
+            <img src="/images/web-apps.svg"/>
+              <div>
+                  <h3>Jak tedy tvorba <b>webové aplikace</b> probíhá ?</h3>
+                <p>Tvorba webových aplikací je oproti běžnému statickému webu daleko komplexnější záležitostí, je proto předem nunté znát odpovědi na následující otázky:
+                </p>
+                   <ul>
+                       <li>K čemu bude aplikace sloužit?</li>
+                       <li>Kdo je cílovým uživatelem aplikace?</li>
+                       <li>Je plánována i mobilní verze aplikace?</li>
+                       <li>Bude aplikace komunikovat jinou aplikací?</li>
+                  </ul>
+                <p>
+                    Pokud máte ve všech otázkách jasno, můžeme se  společně pustit do sepsání funkčních požadávků (co aplikace musí umět) a začít se samotným vývojem </p>
+              </div>
+            </div>
+
         </section>
         <footer>
             <div class="main-section">
             <div >
-                <a>SLUŽBY</a>
-                <a>O NÁS</a>
-                <a>NAŠE PROJEKTY</a>
-                <a>KONTAKT</a>
+                <a onclick="scrollToElementByClass('services')">SLUŽBY</a>
+                <a onclick="scrollToElementByClass('technologies')">O NÁS</a>
+                <a onclick="scrollToElementByClass('our-projects')">NAŠE PROJEKTY</a>
+                <a onclick="scrollToElementByClass('contact-form')">KONTAKT</a>
+                <a onclick="scrollToElementByClass('additional-info')">SLUŽBY NAVÍC</a>
             </div>
             <div >
                 <div class="contact-form__contact-info__contact">
