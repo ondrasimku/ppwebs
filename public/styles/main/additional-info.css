@@ -1,0 +1,93 @@
+.additional-info{
+    background-color: var(--white-background);
+    padding: 3rem 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:3rem;
+}
+
+.additional-info h2{
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: var(--purple);
+}
+
+.additional-info__header-line{
+    border-top: 7px solid var(--pink);
+    border-radius: 1rem;
+    width: 18rem;
+    margin: auto;
+}
+
+.additional-info__element{
+    display: flex;
+    justify-content: center;
+    gap: 8rem;
+}
+
+.additional-info__element h3{
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--purple);
+    line-height: 2.3rem;
+    margin-bottom: 2rem;
+}
+
+
+.additional-info__element img{
+    height: 30rem;
+}
+
+.additional-info__element__text{
+    width: 40%;
+    margin-top: 5rem;
+}
+
+.additional-info__element__text p {
+    color: var(--purple);
+    font-size: 1.2rem;
+    font-weight: 300;
+
+}
+
+.additional-info__element h3>b{
+    color: var(--pink);
+
+}
+
+
+@media only screen and (max-width: 1200px) {
+    .additional-info{
+        padding: 3rem 15%;
+    }
+}
+
+
+@media only screen and (max-width: 700px) {
+
+    .additional-info{
+        padding: 3rem 10%;
+    }
+    .additional-info__element {
+        flex-direction: column;
+        gap:1rem;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .additional-info__element__text{
+        width: 100%;
+        margin-top: 5rem;
+        text-align: center;
+    }
+    .additional-info__element:first-child {
+        flex-direction: column-reverse;
+
+    }
+
+
+}

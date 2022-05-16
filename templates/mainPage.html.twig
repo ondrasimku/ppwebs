@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="{{ asset('styles/main/process.css') }}">
     <link rel="stylesheet" href="{{ asset('styles/main/technologies.css') }}">
     <link rel="stylesheet" href="{{ asset('styles/main/contact-form.css') }}">
+    <link rel="stylesheet" href="{{ asset('styles/main/additional-info.css') }}">
     <link
             rel="stylesheet"
             href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
@@ -82,7 +83,6 @@
 
 
 {% block body %}
-    <audio src="{{ asset('sounds/kril.mp3') }}"></audio>
     <header>
         <nav class="navbar" id="navbar">
             <div class="navbar__close" id="close-menu">✖</div>
@@ -102,6 +102,10 @@
                 <div class="navbar__menu__item">
                     <div class="navbar__menu__item__circle"></div>
                     <a href="javascript:void(0);" onclick="scrollToElementByClass('technologies')">O nás</a>
+                </div>
+                <div class="navbar__menu__item">
+                    <div class="navbar__menu__item__circle"></div>
+                    <a href="javascript:void(0);" onclick="scrollToElementByClass('additional-info')">Služby navíc</a>
                 </div>
             </div>
             <div class="navbar__contact">
@@ -140,6 +144,7 @@
                             <button onclick="scrollToElementByClass('process')">Chci web!!</button>
                         </div>
                     </div>
+                    <img src="{{ asset('images/devices-phone.png') }}" class="mobile-devices">
                 </div>
             </article>
         </section>
@@ -432,7 +437,7 @@
                                     <img src="{{ asset('images/logos_figma.png') }}" style="width: 8%;"/>
                                 </div>
                                 <div class="technologies__list__technologies__technology">
-                                    <img src="{{ asset('images/logos_kril.jpg') }}" style="width: 20%;"/>
+                                    <img src="{{ asset('images/logos_less.png') }}" style="width: 20%;"/>
                                 </div>
                             </div>
                         </div>
@@ -489,13 +494,40 @@
                 </div>
             </section>
         </section>
+        <section class="additional-info">
+
+            <div>
+                <h2>SLUŽBY NAVÍC</h2>
+            <div class="additional-info__header-line"></div>
+            </div>
+            <div class="additional-info__element">
+
+                <div>
+                    <img src="/images/help-with-running-illustration.svg"/>
+                </div>
+                <div class="additional-info__element__text">
+                    <h3>Pomoc se zprovozněním <b>webu</b></h3>
+                    <p>Pokud nemáte webové technologie pod palcem, nebo se vám jen nechtějí řešit technikálie kolem webové stránky nezoufejte, V případě potřeby vám rádi pomůžeme s registrací domény, přesměrováním DNS i se samotným hostingem :-) </p>
+                </div>
+            </div>
+            <div class="additional-info__element">
+                <div class="additional-info__element__text">
+                    <h3>Správa webu po jeho  <b>dokončení </b></h3>
+                    <p>Dokončením webu to teprve začíná, rádi se vám postaráme o softwarové aktualizace, správu obsahu i monitoring samotného webu</p>
+                </div>
+                <div>
+                    <img src="/images/help-with-content-illustration.svg"/>
+                </div>
+            </div>
+        </section>
         <footer>
             <div class="main-section">
             <div >
-                <a>SLUŽBY</a>
-                <a>O NÁS</a>
-                <a>NAŠE PROJEKTY</a>
-                <a>KONTAKT</a>
+                <a onclick="scrollToElementByClass('services')">SLUŽBY</a>
+                <a onclick="scrollToElementByClass('technologies')">O NÁS</a>
+                <a onclick="scrollToElementByClass('our-projects')">NAŠE PROJEKTY</a>
+                <a onclick="scrollToElementByClass('contact-form')">KONTAKT</a>
+                <a onclick="scrollToElementByClass('additional-info')">SLUŽBY NAVÍC</a>
             </div>
             <div >
                 <div class="contact-form__contact-info__contact">

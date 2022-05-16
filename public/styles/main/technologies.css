@@ -36,6 +36,7 @@
 
 .technologies__list__technologies__technology {
     background-color: var(--white-background);
+    height: 10rem;
 
     border-radius: 2rem;
     display: flex;
