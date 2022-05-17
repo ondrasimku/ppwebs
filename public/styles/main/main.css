@@ -1,7 +1,7 @@
 /* CSS RESET */
 html {
     box-sizing: border-box;
-    font-size: 16px;
+    font-size: 14px;
 }
 
 *, *:before, *:after {
@@ -59,7 +59,7 @@ body {
     --purple: #3A0CA3;
     --darker-purple: #3A0CA3;
     --pink: #F72585;
-    --lighter-pink: rgba(247, 37, 133, 0.6);
+    --lighter-pink: rgba(246, 177, 209, 0.6);
     --blue: #3F37C9;
     --white-background: #FFFFFF;
 }
@@ -68,3 +68,10 @@ body {
     background-color: var(--purple);
     font-family: 'Kanit';
 }
+
+.gradient-background{
+    background: linear-gradient(0deg, rgba(63,55,201,1) 36%, rgba(58,12,163,1) 80%);
+}
+
+
+

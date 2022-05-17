@@ -14,8 +14,7 @@
     font-weight: 900;
     text-transform: uppercase;
     color: var(--purple);
-    text-shadow:
-            0 0 2px var(--purple);
+
 }
 
 .services__header-line {
@@ -23,10 +22,11 @@
     border-radius: 1rem;
     width: 26rem;
     margin: auto;
-    box-shadow: 0 0 2px var(--pink);
+
 }
 
 .services__cards {
+
     margin-top: 7rem;
     display: flex;
     flex-direction: row;
@@ -36,8 +36,21 @@
 }
 
 .services__cards__card {
+    display: flex;
+    flex-direction: column;
+
+
     width: 24rem;
     color: var(--blue);
+    background-color: #ffffff;
+    border-radius: 6px;
+    box-shadow: 1px 0px 19px -2px rgba(0,0,0,0.15);
+    padding: 1.5rem 0;
+    transition: 300ms;
+}
+.services__cards__card:hover{
+    transform: scale(1.05);
+    transition: 300ms;
 }
 
 .services__cards__card__header {
@@ -46,16 +59,19 @@
     justify-content: center;
     align-items: center;
     gap: 1rem;
+
 }
 
+
+
 .services__cards__card__header i {
-    color: var(--darker-purple);
+    color: var(--pink);
 }
 
 .services__cards__card__header h2 {
-    font-size: 2rem;
+    font-size: 1.7rem;
     font-weight: 800;
-    color: var(--darker-purple);
+    color: #3A0CA3FF ;
 }
 
 .services__cards__card__text {

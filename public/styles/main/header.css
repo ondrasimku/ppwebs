@@ -1,17 +1,35 @@
 header {
-    height: 64rem;
+    height: 100rem;
     position: relative;
     background: rgb(63,55,201);
     background: linear-gradient(0deg, rgba(63,55,201,1) 21%, rgba(58,12,163,1) 48%);
+
+
+}
+@media only screen and (max-width: 2000px) {
+ header{
+     height: 80rem;
+ }
 }
 
+
+@media only screen and (max-width: 1450px) {
+    header{
+        height: 65rem;
+    }
+}
+.header-info__text .logo {
+    display: none;
+}
 .navbar {
     cursor: none !important;
-    height: 6rem;
+    height: 4rem;
     background-color: var(--blue);
     display: flex;
     flex-direction: row;
     z-index: 10;
+
+    width: 100%;
 }
 
 .navbar__close {
@@ -47,7 +65,7 @@ header {
 }
 
 .navbar__icon img {
-    max-width: 13rem;
+    max-width: 10rem;
 }
 .navbar__icon img:hover {
     /* cursor: pointer; */
@@ -158,7 +176,7 @@ nav a {
     text-decoration: none;
     text-transform: uppercase;
     color: white;
-    font-size: 1.34rem;
+    font-size: 1rem;
     font-weight: 300;
     letter-spacing: 2px;
 }
@@ -167,6 +185,8 @@ nav a {
 .header-info {
     display: flex;
     flex-direction: row;
+    align-items: center;
+
 }
 
 .header-info__devices {
@@ -184,9 +204,9 @@ nav a {
     position: absolute;
     z-index: 2;
     top: 52%;
-    left: 50%;
+    left: 45%;
     transform: translate(-50%, -50%);
-    width: 60%;
+    width: 80%;
 }
 
 .header-info__circle:nth-of-type(1) {
@@ -225,6 +245,17 @@ nav a {
     width: 100%;
     margin: auto;
     color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:4rem;
+    margin-bottom: 20rem;
+
+}
+
+.header-info__text>div img{
+    width: 25rem;
+    margin: auto;
 }
 
 .header-info__text h2 {
@@ -235,17 +266,20 @@ nav a {
 }
 
 .header-info__text p {
-    color: #c9c9c9;
-    width: 83%;
-    padding-right: 5%;
+    color: #e5e5e5;
+
+
     text-align: justify;
     font-weight: 200;
     font-size: 1.4rem;
     line-height: 1.7rem;
+    margin: 0;
+
 }
 
+
 .header-info__text b {
-    font-weight: 200;
+    font-weight: 600;
 }
 
 .header-info__text__buttons {
@@ -253,9 +287,9 @@ nav a {
 }
 
 .header-info__text button {
-    border: 4px solid var(--pink);
+    border: 2px solid var(--pink);
     border-radius: 0.5rem;
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     font-weight: 800;
     background-color: transparent;
     color: white;
@@ -264,12 +298,12 @@ nav a {
     transition: all 0.3s ease;
 }
 
+
 .header-info__text button:hover {
     transform: translateY(-1rem);
     background-color: var(--pink);
     cursor: pointer;
 }
-
 
 
 /* BOTTOM DIVIDER */
@@ -294,11 +328,21 @@ nav a {
     fill: #FFFFFF;
 }
 
+.mobile-devices{
+    display: none;
+    min-width: 70%;
+}
+
 /* RESPONSIVE */
 
 @media only screen and (max-width: 1110px) {
+    .header-info__text .logo {
+     display: block;
+    }
+
     header {
-        background: var(--purple);
+        background: linear-gradient(0deg, rgba(63,55,201,1) 21%, rgba(58,12,163,1) 48%);
+
     }
 
     #cursor {
@@ -332,6 +376,8 @@ nav a {
         justify-content: flex-start;
         z-index: 10;
     }
+
+
 
     .navbar--active .navbar__close {
         display: block;
@@ -481,10 +527,17 @@ nav a {
         display: flex;
         flex-direction: column-reverse;
         margin-bottom: 10rem;
+        align-items: flex-start;
     }
 
     .header-info__devices {
+        display: none;
         width: 80%;
+        top: 20%;
+        left: 20%;
+    }
+    .mobile-devices{
+        display: block;
     }
 
     .header-info__devices #devices {
@@ -506,8 +559,7 @@ nav a {
         font-size: 3rem;
         text-align: center;
         padding-bottom: 1rem;
-        text-shadow:
-                0 0 5px #fff;
+
     }
 
     .header-info__text p {
@@ -551,20 +603,18 @@ nav a {
         display: none;
     }
 
-    .services {
-        margin-top: 17%;
-    }
+
 }
 
-@media only screen and (max-width: 840px) {
-    .services {
-        margin-top: 5%;
-    }
+@media only screen and (max-width: 1110px) {
+   header{
+       height: 80rem;
+   }
 }
 
 @media only screen and (max-width: 580px) {
     .services {
-        margin-top: 8%;
+
     }
     .navbar--active {
         width: 78%;
@@ -573,12 +623,18 @@ nav a {
 
 @media only screen and (max-width: 408px) {
     .services {
-        margin-top: 30%;
+ height: 80rem;
     }
 }
 
 @media only screen and (max-width: 337px) {
     .services {
-        margin-top: 40%;
+       height: 80rem;
+    }
+}
+
+@media only screen and (max-width: 276px) {
+    .services {
+        height: 90rem;
     }
 }
