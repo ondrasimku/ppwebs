@@ -1,5 +1,7 @@
 let currentActiveItem   = document.getElementsByClassName('navbar__menu__item active')[0];
 let cursor              = document.getElementById('cursor');
+let navbar              = document.getElementById("navbar");
+let navbarLogo          = document.getElementById('navbar-logo');
 
 function headerLogic() {
     document.getElementById('open-menu').addEventListener('click', ()=>{
@@ -32,9 +34,19 @@ function headerLogic() {
         return;
 
     // Moves cursor div to position of mouse pointer
-    document.addEventListener('mousemove', (event) => {
+    navbar.addEventListener('mousemove', (event) => {
         cursor.style.left = event.pageX + 'px';
-        cursor.style.top = event.pageY + 'px';
+        cursor.style.top = (event.pageY - window.pageYOffset) + 'px';
+    });
+
+    navbarLogo.addEventListener('mouseover', ()=> {
+        cursor.style.transform = 'scale(3)';
+        cursor.style.mixBlendMode = 'multiply';
+    });
+
+    navbarLogo.addEventListener('mouseout', ()=> {
+        cursor.style.transform = '';
+        cursor.style.mixBlendMode = 'normal';
     });
 }
 
@@ -48,7 +60,7 @@ function setActiveItem(newItem) {
 }
 
 function itemMouseOver(item) {
-    cursor.style.transform = 'scale(3.5)';
+    cursor.style.transform = 'scale(3)';
     cursor.style.mixBlendMode = 'multiply';
     if(item === currentActiveItem)
         return;
