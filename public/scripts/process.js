@@ -50,7 +50,7 @@ chatting.addEventListener('click', async () => {
     leftText.innerHTML = `Ozveme se vám zpět a domluvíme se, jaký druh komunikace 
     vám bude nejvíce vyhovovat (osobní schůzky, telefonní hovory, online meetingy, emaily, etc.). 
     Poté se vás budeme ptát. Na váš produkt, vaši cílovou 
-    skupinu, konkurenci, preferovaný design a mnoho dalšího. Až si budeme jistí, že toho víme vše potřebné, 
+    skupinu, konkurenci, preferovaný design a mnoho dalšího. Až si budeme jistí, že víme vše potřebné, 
     pustíme se do designování vašeho webu`;
     await showLeft();
 });
