@@ -305,7 +305,7 @@ nav a {
 
 
 .header-info__text button:hover {
-    transform: translateY(-1rem);
+
     background-color: var(--pink);
     cursor: pointer;
 }

@@ -1,7 +1,7 @@
 email: simon.klibi@outlook.com
 
-            phone: aa
+            phone: dfd
 
-            name: aaa
+            name: dffd
 
-            message: fddf
+            message: dfd
