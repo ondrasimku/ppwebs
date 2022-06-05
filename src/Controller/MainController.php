@@ -1,6 +1,8 @@
 <?php
 namespace App\Controller;
 
+use App\Entity\Contact;
+use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -9,6 +11,15 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class MainController extends AbstractController
 {
+    private EntityManagerInterface $em;
+    /**
+     * MainController constructor.
+     */
+    public function __construct(EntityManagerInterface $em)
+    {
+        $this->em = $em;
+    }
+
     /**
      * @Route("/", "main_page")
      */
@@ -26,8 +37,17 @@ class MainController extends AbstractController
         $name = $data["name"];
         $message = $data["message"];
 
+        if ( !$message || !$phone || !$name || !$email)
+            return new Response("$message, $phone, $name, $email", Response::HTTP_BAD_REQUEST);
 
-        $myfile = fopen($email, "w");
+        $newContact = new Contact();
+        $newContact->setEmail($email)
+            ->setName($name)
+            ->setNumber($phone)
+            ->setMessage($message);
+        $this->em->persist($newContact);
+        $this->em->flush();
+        /*$myfile = fopen($email, "w");
         $txt =
             "email: $email\n
             phone: $phone\n
@@ -35,10 +55,7 @@ class MainController extends AbstractController
             message: $message";
 
         fwrite($myfile, $txt);
-        fclose($myfile);
-
-        if ( !$message || !$phone || !$name || !$email)
-            return new Response("$message, $phone, $name, $email", Response::HTTP_BAD_REQUEST);
+        fclose($myfile);*/
 
         return new Response("", Response::HTTP_OK);
 
